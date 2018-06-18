@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pr1801ELearningSystem</title>
+    <title>
+      <%= full_title(yield(:title)) %>
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <%= render "layouts/header" %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
   </body>
 </html>
