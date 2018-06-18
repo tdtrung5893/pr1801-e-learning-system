@@ -1,0 +1,51 @@
+<% provide(:title, "Home Page") %>
+<script>
+  function init() {
+    window.addEventListener('scroll', function(e){
+      var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+        shrinkOn = 300,
+        header = document.querySelector("header");
+      if (distanceY > shrinkOn) {
+        classie.add(header,"smaller");
+      } else {
+        if (classie.has(header,"smaller")) {
+          classie.remove(header,"smaller");
+        }
+      }
+    });
+  }
+  window.onload = init();
+</script>
+
+<div id="main">
+  <div id="content">
+    <section>
+      <div class="container">
+        <h1>Khóa học tu vung co ban.</h1>
+        <p>Khóa học này sử dụng các phương pháp học tiếng Anh hiện đại nhất thế giới như: TPR (Total Physical Response), ELC (Experiential Learning Cycle), ứng dụng NLP (Neuro Linguistic Programming) để thay đổi tư duy, nhận thức của học viên nhằm giúp các bạn có đam mê, động lực học tiếng Anh. Đồng thời ứng dụng hệ thống học ngữ âm Pronunciation Guide nổi tiếng nhất thế giới, giúp bạn có được ngữ âm, ngữ điệu chuẩn như người bản ngữ, làm chủ vốn từ vựng để tự tin giao tiếp trong những tình huống và chủ đề cơ bản. </p>
+        <p>
+          <a href="">« An vao day de bat dau khoa hoc</a><br>
+        </p>
+      </div>
+    </section>
+    <section class="color">
+      <div class="container">
+        <h1>Khóa học tu vung trung cap</h1>
+        <p>Khóa học này đặc biệt quan trọng khi bạn có nhu cầu học lên cao và làm việc trong môi trường sử dụng tiếng Anh. Khóa học cung cấp cho bạn những lý thuyết cơ bản, đòi hỏi bạn phải ghi nhớ kỹ trước khi bắt đầu thực hành</p>
+        <p>
+          <a href="" class="font-color">« An vao day de bat dau khoa hoc</a><br>
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h1>Khóa học tu vung nang cao</h1>
+        <p>Tăng tốc khả năng ghi nhớ từ vựng nhờ phương pháp TPR, thông qua các bai test. Bài tập đa dạng, xoáy sâu vào chủ đề giúp bạn nhớ được dạng từ, cấu trúc từ, cụm từ</p>
+        <p>
+          <a href="">« An vao day de bat dau khoa hoc</a><br>
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
