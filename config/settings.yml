@@ -1,0 +1,5 @@
+user:
+  validates:
+    name_maximum: 50
+    email_maximum: 200
+    password_minimum: 6

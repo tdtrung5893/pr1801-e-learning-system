@@ -1,0 +1,24 @@
+<%= provide(:title, t("log_in")) %>
+<div class="container margin-header margin-footer">
+  <h1 class="title"><%= t("log_in") %></h1>
+  <div>
+    <div class="offset-lg-3 col-lg-6">
+      <%= form_for :session, url: login_path do |f| %>
+        <div class="form-group">
+          <%= f.label :username, t("user_name") %>
+          <%= f.text_field :username, placeholder: t("username_ph_login"), class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password, t("password") %>
+          <%= f.password_field :password, placeholder: t("password_ph_login"), class: "form-control" %>
+        </div>
+        <div class="text-center">
+          <%= f.submit t("log_in"), class: "btn btn-info col-lg-12" %>
+        </div>
+        <div class="text-right">
+          <%= link_to t("register"), new_user_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
