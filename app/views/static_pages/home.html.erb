@@ -1,51 +1,73 @@
-<% provide(:title, "Home Page") %>
-<script>
-  function init() {
-    window.addEventListener('scroll', function(e){
-      var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-        shrinkOn = 300,
-        header = document.querySelector("header");
-      if (distanceY > shrinkOn) {
-        classie.add(header,"smaller");
-      } else {
-        if (classie.has(header,"smaller")) {
-          classie.remove(header,"smaller");
-        }
-      }
-    });
-  }
-  window.onload = init();
-</script>
-
-<div id="main">
-  <div id="content">
-    <section>
-      <div class="container">
-        <h1>Khóa học tu vung co ban.</h1>
-        <p>Khóa học này sử dụng các phương pháp học tiếng Anh hiện đại nhất thế giới như: TPR (Total Physical Response), ELC (Experiential Learning Cycle), ứng dụng NLP (Neuro Linguistic Programming) để thay đổi tư duy, nhận thức của học viên nhằm giúp các bạn có đam mê, động lực học tiếng Anh. Đồng thời ứng dụng hệ thống học ngữ âm Pronunciation Guide nổi tiếng nhất thế giới, giúp bạn có được ngữ âm, ngữ điệu chuẩn như người bản ngữ, làm chủ vốn từ vựng để tự tin giao tiếp trong những tình huống và chủ đề cơ bản. </p>
-        <p>
-          <a href="">« An vao day de bat dau khoa hoc</a><br>
-        </p>
-      </div>
-    </section>
-    <section class="color">
-      <div class="container">
-        <h1>Khóa học tu vung trung cap</h1>
-        <p>Khóa học này đặc biệt quan trọng khi bạn có nhu cầu học lên cao và làm việc trong môi trường sử dụng tiếng Anh. Khóa học cung cấp cho bạn những lý thuyết cơ bản, đòi hỏi bạn phải ghi nhớ kỹ trước khi bắt đầu thực hành</p>
-        <p>
-          <a href="" class="font-color">« An vao day de bat dau khoa hoc</a><br>
-        </p>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <h1>Khóa học tu vung nang cao</h1>
-        <p>Tăng tốc khả năng ghi nhớ từ vựng nhờ phương pháp TPR, thông qua các bai test. Bài tập đa dạng, xoáy sâu vào chủ đề giúp bạn nhớ được dạng từ, cấu trúc từ, cụm từ</p>
-        <p>
-          <a href="">« An vao day de bat dau khoa hoc</a><br>
-        </p>
-      </div>
-    </section>
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active slider-1"></div>
+      <div class="carousel-item slider-2"></div>
+      <div class="carousel-item slider-3"></div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only"><%= t("previous") %></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only"><%= t("next") %></span>
+    </a>
   </div>
-</div>
+</header>
 
+<!-- Page Content -->
+<div class="container">
+  <h1 class="my-4">Chào mừng bạn đến với THT E-Learning</h1>
+  <!-- Portfolio Section -->
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="#"><%= image_tag("5.jpg", class:"card-img-top") %></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Khóa học từ vựng cơ bản</a>
+          </h4>
+          <p class="card-text">Khóa học này sử dụng các phương pháp học tiếng Anh hiện đại nhất thế giới như: TPR (Total Physical Response), ELC (Experiential Learning Cycle), ứng dụng NLP (Neuro Linguistic Programming) để thay đổi tư duy, nhận thức của học viên nhằm giúp các bạn có đam mê, động lực học tiếng Anh.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary"><%= t("start_learn") %></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="#"><%= image_tag("6.jpg", class:"card-img-top") %></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Khóa học từ vựng trung cấp</a>
+          </h4>
+          <p class="card-text">Khóa học này đặc biệt quan trọng khi bạn có nhu cầu học lên cao và làm việc trong môi trường sử dụng tiếng Anh. Khóa học cung cấp cho bạn những lý thuyết cơ bản, đòi hỏi bạn phải ghi nhớ kỹ trước khi bắt đầu thực hành</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary"><%= t("start_learn") %></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="#"><%= image_tag("7.jpg", class:"card-img-top") %></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Khóa học từ vựng nâng cao</a>
+          </h4>
+          <p class="card-text">Bài tập đa dạng, xoáy sâu vào chủ đề giúp bạn nhớ được dạng từ, cấu trúc từ, cụm từ. Đồng thời ứng dụng hệ thống học ngữ âm Pronunciation Guide nổi tiếng nhất thế giới, giúp bạn có được ngữ âm, ngữ điệu chuẩn như người bản ngữ, làm chủ vốn từ vựng để tự tin giao tiếp trong những tình huống và chủ đề cơ bản.</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary"><%= t("start_learn") %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+</div>

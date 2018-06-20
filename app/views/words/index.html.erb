@@ -1,0 +1,67 @@
+<% provide :title, t("word_list") %>
+
+  <body>
+    <div class="container mt-5 mb-5">
+      <h1 class="text-sm-center jumbotron"><%= t("word_list") %></h1>
+      <div class="input-group mb-3 shadow">
+        <input type="text-sm-left" class="form-control" placeholder="<%= t('search') %>">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-success btn-lg"><%= t("go") %></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 text-sm-center bg-secondary rounded">
+          <p><%= t("word_groups") %></p>
+          <div class="btn-group dropdown dropright">
+            <button type="button" class="btn btn-primary"><%= t("alphabet") %></button>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">A-B</a></br>
+              <a class="dropdown-item" href="#">C-D</a></br>
+              <a class="dropdown-item" href="#">E-F</a></br>
+              <a class="dropdown-item" href="#">G-H</a></br>
+              <a class="dropdown-item" href="#">I-J</a></br>
+              <a class="dropdown-item" href="#">K-L</a></br>
+              <a class="dropdown-item" href="#">M-N</a></br>
+              <a class="dropdown-item" href="#">O-P</a></br>
+              <a class="dropdown-item" href="#">Q-R</a></br>
+              <a class="dropdown-item" href="#">S-T</a></br>
+              <a class="dropdown-item" href="#">U-V</a></br>
+              <a class="dropdown-item" href="#">W-X</a></br>
+              <a class="dropdown-item" href="#">Y-Z</a></br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 text-sm-center bg-info rounded">
+          <p><%= t("words") %></p>
+          <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#"><%= t("previous") %></a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><%= t("next") %></a></li>
+          </ul>
+          <div class="list-group text-sm-left mb-3">
+            <a href="#" class="list-group-item list-group-item-action">tired</a>
+            <a href="#" class="list-group-item list-group-item-action">same</a>
+            <a href="#" class="list-group-item list-group-item-action">little</a>
+            <a href="#" class="list-group-item list-group-item-action">next</a>
+            <a href="#" class="list-group-item list-group-item-action">real</a>
+            <a href="#" class="list-group-item list-group-item-action">main</a>
+            <a href="#" class="list-group-item list-group-item-action">open</a>
+            <a href="#" class="list-group-item list-group-item-action">local</a>
+            <a href="#" class="list-group-item list-group-item-action">personal</a>
+            <a href="#" class="list-group-item list-group-item-action">private</a>
+            <a href="#" class="list-group-item list-group-item-action">special</a>
+            <a href="#" class="list-group-item list-group-item-action">human</a>
+            <a href="#" class="list-group-item list-group-item-action">dirty</a>
+            <a href="#" class="list-group-item list-group-item-action">different</a>
+            <a href="#" class="list-group-item list-group-item-action">red</a>
+            <a href="#" class="list-group-item list-group-item-action">clean</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

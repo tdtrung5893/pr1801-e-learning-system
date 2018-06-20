@@ -1,17 +1,35 @@
-<div class="container">
-  <div id="wrapper">
-    <header>
-      <div class="container clearfix">
-        <h1 id="logo">
-          THT
-        </h1>
-        <nav>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Login</a>
-          <a href="">Register</a>
-        </nav>
-      </div>
-    </header>
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand logo-tht" href="#"><%= image_tag("logo.png") %></a>
+    <div class="search-bar col-md-6">
+      <form>
+        <input type="email" class="form-control" id="InputEmail1" placeholder="Search..." name="search">
+        <span><i class="button-search fa fa-search"></i></span>
+      </form>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link item-bar" href="#"><%= t("home") %></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t("course") %>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" href="blog-home-1.html"><%= t("basic") %></a>
+            <a class="dropdown-item" href="blog-home-2.html"><%= t("intermediate") %></a>
+            <a class="dropdown-item" href="blog-post.html"><%= t("advance") %></a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><%= t("log_in") %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><%= t("register") %></a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
