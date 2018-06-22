@@ -1,19 +1,19 @@
 source "https://rubygems.org"
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
 end
 
 gem "autoprefixer-rails", "~> 8.6", ">= 8.6.2"
 gem "bcrypt"
 gem "bootstrap", "~> 4.1.1"
 gem "bootstrap-will_paginate"
+gem "carrierwave", "1.1.0"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "jquery-ui-rails"
+gem "mini_magick", "4.7.0"
 gem "mysql2"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.1.6"
@@ -22,6 +22,7 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate"
+gem 'bootstrap-glyphicons'
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

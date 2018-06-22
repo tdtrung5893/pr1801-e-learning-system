@@ -9,7 +9,7 @@ en:
   home: "Home"
   intermediate: "Intermediate"
   log_in: "Log in"
-  log_in: "Log out"
+  log_out: "Log out"
   login_failed: "Invalid email/password combination!"
   login_success: "Welcome to THT E-Learning!"
   login_warning: "Please log in!"

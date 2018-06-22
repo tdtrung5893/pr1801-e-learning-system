@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -42,7 +43,12 @@ class UsersController < ApplicationController
     redirect_to root_url if @user.nil?
   end
 
+  def correct_user
+    set_user
+    redirect_to root_url unless current_user?(@user)
+  end
+
   def user_params
-    params.require(:user).permit :username, :email, :password, :password_confirmation
+    params.require(:user).permit :avatar, :username, :email, :password, :password_confirmation
   end
 end
