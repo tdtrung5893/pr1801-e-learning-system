@@ -5,22 +5,25 @@ en:
   login_success: "Welcome to THT E-Learning!"
   login_warning: "Please log in!"
   logout_success: "You are logged out!"
+  profile_updated: "Profile updated"
   register_failed: "Register failed!"
   register_success: "Register Success!"
   reset_success: "Password has been reset."
   sent_email_success: "Email sent with password reset instructions"
   sent_error: "Email address not found"
+  user_deleted: "User deleted"
+
   layouts:
     header:
-      search: "Search.."
-      home: "Home"
-      course: "Course"
-      basic: "Basic"
-      intermediate: "Intermediate"
       advance: "Advance"
+      basic: "Basic"
+      course: "Course"
+      home: "Home"
+      intermediate: "Intermediate"
       log_in: "Log in"
       log_out: "Log out"
       register: "Register"
+      search: "Search.."
   password_resets:
     edit:
       password: "New password"
@@ -28,56 +31,64 @@ en:
       reset_password: "Reset password"
       update: "Update password"
     new:
-      forgot_password: "Forgot password"
       email_ph: "Enter your email"
+      forgot_password: "Forgot password"
       submit: "Send email"
   sessions:
     new:
+      forgot_password: "Forgot password?"
       log_in: "Log in"
-      user_name: "User name"
-      username_ph_login: "Enter your name"
       password: "Password"
       password_ph_login: "Enter your password"
-      forgot_password: "Forgot password?"
       register: "Register"
       remember: "Remember me"
+      user_name: "User name"
+      username_ph_login: "Enter your name"
   static_pages:
     home:
-      previous: "Previous"
       next: "Next"
-      welcome: "Welcome to THT E-Learning system"
+      previous: "Previous"
       start_learn: "Start Learn"
+      welcome: "Welcome to THT E-Learning system"
   users:
     form:
-      avatar: "Avatar"
-      delete_avatar: "Remove avatar"
+      email: "Email"
+      password: "Password"
+      user_name: "User Name"
+      confirmation: "Confirmation"
     index:
-      users: "All Users"
       avatar: "Avatar"
       email: "Email"
       delete: "Delete"
+      user_name: "User Name"
+      users: "All Users"
+      you_sure: "You sure?"
     new:
+      email_ph: "Enter user email"
+      password: "Password"
+      password_confirm: "Password Confirmation"
+      password_confirm_ph: "Enter password confirmation"
+      password_ph: "Enter user password"
       register: "Register"
       user_name: "User name"
       username_ph: "Enter user name"
-      email_ph: "Enter user email"
-      password: "Password"
-      password_ph: "Enter user password"
-      password_confirm: "Password Confirmation"
-      password_confirm_ph: "Enter password confirmation"
     show:
+      content: "Nothing to show"
       follow: "Follow"
       following: "people following"
       setting: " Account settings"
-      content: "Nothing to show"
+    edit:
+      edit_user: "Edit user"
+      save_changes: "Save changes"
+      update_your_profile: "Update your profile"
   words:
     index:
+      alphabet: "Alphabet"
+      go: "Go"
+      search: "Search"
       word_groups: "Word groups"
       word_list: "Word List"
       words: "Words"
-      go: "Go"
-      alphabet: "Alphabet"
-      search: "Search"
   models:
     user:
       avatar: "Should be less than 5MB"
