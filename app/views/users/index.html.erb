@@ -3,13 +3,23 @@
     <h1 class="title"><%= t("users") %></h1>
     <table class="table table-bordered table-hover">
       <tr>
+        <th>Avatar</th>
         <th><%= t("user_name") %></th>
         <th>Email</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Phone</th>
       </tr>
       <% @users.each do |user| %>
         <tr>
+          <td><%= link_to user.avatar, user %></td>
           <td><%= link_to user.username, user %></td>
           <td><%= link_to user.email, user %></td>
+          <td><%= link_to user.age %></td>
+          <td><%= link_to user.gender %></td>
+          <td><%= link_to user.address %></td>
+          <td><%= link_to user.phone %></td>
         </tr>
       <% end %>
     </table>
