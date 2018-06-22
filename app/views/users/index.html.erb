@@ -1,0 +1,17 @@
+<% provide(:title, t("users")) %>
+  <div class="container margin-header margin-footer">
+    <h1 class="title"><%= t("users") %></h1>
+    <table class="table table-bordered table-hover">
+      <tr>
+        <th><%= t("user_name") %></th>
+        <th>Email</th>
+      </tr>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.username, user %></td>
+          <td><%= link_to user.email, user %></td>
+        </tr>
+      <% end %>
+    </table>
+    <div"><%= will_paginate %></div>
+  </div>

@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
- */
+@import "colors";
 
 body {
   padding-top: 54px;
@@ -50,17 +46,32 @@ body {
 }
 
 .slider-1 {
-  background-image: url('2.jpg');
+  background-image: url("2.jpg");
 }
 
 .slider-2 {
-  background-image: url('8.jpg');
+  background-image: url("8.jpg");
 }
 
 .slider-3 {
-  background-image: url('9.jpg');
+  background-image: url("9.jpg");
 }
 
-.register {
-  margin-top: 100px;
+.margin-header {
+  margin-top: 50px;
+}
+
+.margin-footer {
+  margin-bottom: 100px;
+}
+
+.btn-register {
+  width: 100%;
+}
+
+.title {
+  font-size: 70px;
+  text-align: center;
+  font-weight: bold;
+  color: $gray;
 }
