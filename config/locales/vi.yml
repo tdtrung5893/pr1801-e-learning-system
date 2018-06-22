@@ -1,67 +1,36 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
-en:
-  next: "Tiếp"
-  previous: "Trước"
-  start_learn: "Bắt đầu học"
-  word_list: "Danh sách từ"
-  go: "Tìm"
-  word_groups: "Nhóm từ"
-  alphabet: "Bảng chữ cái"
-  words: "Từ"
-  search: "Tìm kiếm từ"
-  home: "Trang chủ"
-  course: "Khóa học"
-  basic: "Khóa học từ vựng cơ bản"
-  intermediate: "Khóa học từ vựng trung cấp"
+vi:
   advance: "Khóa học từ vựng nâng cao"
+  alphabet: "Bảng chữ cái"
+  basic: "Khóa học từ vựng cơ bản"
+  course: "Khóa học"
+  email_ph: "Nhập email người dùng"
+  email_ph_login: "Email đăng nhập"
+  go: "Tìm"
+  home: "Trang chủ"
+  intermediate: "Khóa học từ vựng trung cấp"
   log_in: "Đăng nhập"
   log_out: "Đăng xuất"
-  register: "Đăng kí"
-  user_name: "Tên người dùng"
+  login_failed: "Mật khẩu hoặc email không hợp lệ!"
+  login_success: "Chào mừng bạn đến với lớp học trực tuyến THT!"
+  login_warning: "Đăng nhập để tiếp tục"
+  logout_success: "Bạn đã đăng xuất thành công!"
+  next: "Tiếp"
   password: "Mật khẩu"
   password_confirm: "Nhập lại mật khẩu"
-  register_success: "Đăng ký thành công!"
-  register_failed: "Đăng ký thất bại!"
-  login_success: "Chào mừng bạn đến với lớp học trực tuyến THT!"
-  login_failed: "Mật khẩu hoặc email không hợp lệ!"
-  logout_success: "Bạn đã đăng xuất thành công!"
-  username_ph: "Nhập tên người dùng"
-  email_ph: "Nhập email người dùng"
-  password_ph: "Nhập mật khẩu"
   password_confirm_ph: "Nhập lại mật khẩu"
-  username_ph_login: "Tên đăng nhập"
-  email_ph_login: "Email đăng nhập"
+  password_ph: "Nhập mật khẩu"
   password_ph_login: "Mật khẩu của bạn"
+  previous: "Trước"
+  register: "Đăng kí"
+  register_failed: "Đăng ký thất bại!"
+  register_success: "Đăng ký thành công!"
+  search: "Tìm kiếm từ"
   search: "Tìm kiếm"
-  login_warning: "Đăng nhập để tiếp tục"
+  start_learn: "Bắt đầu học"
+  user_name: "Tên người dùng"
+  username_ph: "Nhập tên người dùng"
+  username_ph_login: "Tên đăng nhập"
   users: "Danh sách người dùng"
+  word_groups: "Nhóm từ"
+  word_list: "Danh sách từ"
+  words: "Từ"
