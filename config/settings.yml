@@ -3,3 +3,6 @@ user:
     name_maximum: 50
     email_maximum: 200
     password_minimum: 6
+  avatar_size: 5
+uploaders:
+  avatar_resize: [250, 100]

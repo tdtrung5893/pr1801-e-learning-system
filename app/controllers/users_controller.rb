@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -15,10 +15,10 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       log_in @user
-      flash[:success] = t("register_success")
+      flash[:success] = t "register_success"
       redirect_to @user
     else
-      flash[:success] = t("register_failed")
+      flash[:success] = t "register_failed"
       render :new
     end
   end

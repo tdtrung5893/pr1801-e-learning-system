@@ -22,12 +22,17 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate"
-gem 'bootstrap-glyphicons'
+gem "bootstrap-glyphicons"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
   gem "selenium-webdriver"
+end
+
+group :production do
+  gem "pg",  "0.20.0"
+  gem "fog", "1.42"
 end
 
 group :development do

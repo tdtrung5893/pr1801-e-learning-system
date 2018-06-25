@@ -1,4 +1,4 @@
-@import "colors";
+@import 'colors';
 
 body {
   padding-top: 54px;
@@ -46,15 +46,15 @@ body {
 }
 
 .slider-1 {
-  background-image: url("2.jpg");
+  background-image: url('2.jpg');
 }
 
 .slider-2 {
-  background-image: url("8.jpg");
+  background-image: url('8.jpg');
 }
 
 .slider-3 {
-  background-image: url("9.jpg");
+  background-image: url('9.jpg');
 }
 
 .margin-header {
@@ -85,7 +85,7 @@ body {
 }
 
 .bg-profile {
-  background: #F1F3FA;
+  background: $slate-blue;
 }
 
 .profile {
@@ -95,17 +95,15 @@ body {
 /* Profile sidebar */
 .profile-sidebar {
   padding: 20px 0 10px 0;
-  background: #fff;
+  background: $white;
 }
 
 .profile-userpic img {
   float: none;
+  display: block;
   margin: 0 auto;
   width: 50%;
   height: 50%;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
 }
 
 .profile-usertitle {
@@ -114,14 +112,14 @@ body {
 }
 
 .profile-usertitle-name {
-  color: #5a7391;
+  color: $royal-blue;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
 }
 
 .profile-usertitle-job {
-  color: #5b9bd1;
+  color: $slate-gray;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -149,7 +147,7 @@ body {
 }
 
 .profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7;
+  border-bottom: 1px solid $white;
 }
 
 .profile-usermenu ul li:last-child {
@@ -157,7 +155,7 @@ body {
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
+  color: $snow;
   font-size: 14px;
   font-weight: 400;
 }
@@ -168,8 +166,8 @@ body {
 }
 
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
+  background-color: $white;
+  color: $slate-gray;
 }
 
 .profile-usermenu ul li.active {
@@ -177,21 +175,42 @@ body {
 }
 
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
+  color: $azure;
+  background-color: $white;
+  border-left: 2px solid $azure;
   margin-left: -2px;
 }
 
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #fff;
+  background: $white;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 10px;
+  color: $dark-gray;
   min-height: 460px;
 }
 
 .profile-follow {
   font-size: 15px;
-  color: $gray;
+  color: $dark-gray;
   margin-top: 10px;
+}
+
+.avatar {
+  display: block;
+  width: 150px;
+  height: 100px;
+}
+
+.thumbnail {
+  float: left;
+  position: relative;
+  width: 100px;
+  margin: 10px 0 5px 0;
+  padding: 0;
+  height: 130px;
+  border: none;
+  text-align: center;
 }
