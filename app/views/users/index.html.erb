@@ -1,27 +1,21 @@
-<% provide(:title, t("users")) %>
-  <div class="container margin-header margin-footer">
-    <h1 class="title"><%= t("users") %></h1>
-    <table class="table table-bordered table-hover">
+<% provide :title, t(".users") %>
+<div class="container margin-header margin-footer">
+  <h1 class="title"><%= t ".users" %></h1>
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th><%= t ".avatar" %></th>
+      <th><%= t ".user_name" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+    <% @users.each do |user| %>
       <tr>
-        <th>Avatar</th>
-        <th><%= t("user_name") %></th>
-        <th>Email</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>Address</th>
-        <th>Phone</th>
+        <td><%= image_tag user.avatar, class: "thumbnail" %></td>
+        <td><%= link_to user.username, user %></td>
+        <td><%= link_to user.email, user %></td>
+        <td><%= link_to t(".delete"), user %></td>
       </tr>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= link_to user.avatar, user %></td>
-          <td><%= link_to user.username, user %></td>
-          <td><%= link_to user.email, user %></td>
-          <td><%= link_to user.age %></td>
-          <td><%= link_to user.gender %></td>
-          <td><%= link_to user.address %></td>
-          <td><%= link_to user.phone %></td>
-        </tr>
-      <% end %>
-    </table>
-    <div"><%= will_paginate %></div>
-  </div>
+    <% end %>
+  </table>
+  <div"><%= will_paginate %></div>
+</div>

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.select(:id, :username, :email).paginate(page: params[:page], per_page: 10)
+    @users = User.load_data.paginate(page: params[:page], per_page: Settings.users.page)
   end
 
   def new

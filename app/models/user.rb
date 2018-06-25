@@ -17,7 +17,8 @@ class User < ApplicationRecord
   validates :username,  presence: true, length: { maximum: Settings.user.validates.name_maximum }
 
   before_save :downcase_email
-  before_save { self.email = email.downcase }
+
+  scope :load_data, -> { select(:id, :avatar, :username, :email) }
 
   def User.new_token
     SecureRandom.urlsafe_base64

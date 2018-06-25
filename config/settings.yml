@@ -6,3 +6,5 @@ user:
   avatar_size: 5
 uploaders:
   avatar_resize: [250, 100]
+users:
+  page: 10
