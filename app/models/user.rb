@@ -1,12 +1,14 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :remember_digest, :reset_token
   has_secure_password
+  mount_uploader :avatar, AvatarUploader
 
   has_many :activities
   has_many :registers
   has_many :user_lessons
   has_many :user_words
 
+  validate :avatar_size
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: Settings.user.validates.email_maximum },
             format: { with: VALID_EMAIL_REGEX }
@@ -56,8 +58,19 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+  def current_user? user
+    self == user
+  end
+
+  def avatar_size
+    if avatar.size > Settings.user.avatar_size.megabytes
+      errors.add(:avatar, t(".avatar"))
+    end
+  end
+
   private
+
   def downcase_email
-    self.email = email.downcase
+    self.email = email.downcase!
   end
 end

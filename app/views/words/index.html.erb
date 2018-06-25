@@ -1,19 +1,19 @@
-<% provide :title, t("word_list") %>
+<% provide :title, t(".word_list") %>
 
   <body>
     <div class="container mt-5 mb-5">
-      <h1 class="text-sm-center jumbotron"><%= t("word_list") %></h1>
+      <h1 class="text-sm-center jumbotron"><%= t(".word_list") %></h1>
       <div class="input-group mb-3 shadow">
-        <input type="text-sm-left" class="form-control" placeholder="<%= t('search') %>">
+        <input type="text-sm-left" class="form-control" placeholder="<%= t(".search") %>">
         <div class="input-group-append">
-          <button type="submit" class="btn btn-success btn-lg"><%= t("go") %></button>
+          <button type="submit" class="btn btn-success btn-lg"><%= t(".go") %></button>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4 text-sm-center bg-secondary rounded">
-          <p><%= t("word_groups") %></p>
+          <p><%= t(".word_groups") %></p>
           <div class="btn-group dropdown dropright">
-            <button type="button" class="btn btn-primary"><%= t("alphabet") %></button>
+            <button type="button" class="btn btn-primary"><%= t(".alphabet") %></button>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
               <span class="caret"></span>
             </button>
@@ -35,13 +35,13 @@
           </div>
         </div>
         <div class="col-sm-8 text-sm-center bg-info rounded">
-          <p><%= t("words") %></p>
+          <p><%= t(".words") %></p>
           <ul class="pagination pagination-sm justify-content-center">
-            <li class="page-item disabled"><a class="page-link" href="#"><%= t("previous") %></a></li>
+            <li class="page-item disabled"><a class="page-link" href="#"><%= t(".previous") %></a></li>
             <li class="page-item active"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#"><%= t("next") %></a></li>
+            <li class="page-item"><a class="page-link" href="#"><%= t(".next") %></a></li>
           </ul>
           <div class="list-group text-sm-left mb-3">
             <a href="#" class="list-group-item list-group-item-action">tired</a>
