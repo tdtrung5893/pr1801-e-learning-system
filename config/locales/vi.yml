@@ -54,6 +54,7 @@ vi:
     index:
       users: "Danh sách người dùng"
       avatar: "Ảnh đại diện"
+      email: "Email"
       delete: "Xóa người dùng"
     new:
       register: "Đăng ký"

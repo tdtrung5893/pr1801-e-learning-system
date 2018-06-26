@@ -1,15 +1,15 @@
 en:
+  check_expiration: "Password reset has expired."
+  email_blank: "Can't be empty"
   login_failed: "Invalid email/password combination!"
   login_success: "Welcome to THT E-Learning!"
   login_warning: "Please log in!"
   logout_success: "You are logged out!"
   register_failed: "Register failed!"
   register_success: "Register Success!"
+  reset_success: "Password has been reset."
   sent_email_success: "Email sent with password reset instructions"
   sent_error: "Email address not found"
-  email_blank: "Can't be empty"
-  reset_success: "Password has been reset."
-  check_expiration: "Password reset has expired."
   layouts:
     header:
       search: "Search.."
@@ -23,9 +23,9 @@ en:
       register: "Register"
   password_resets:
     edit:
-      reset_password: "Reset password"
       password: "New password"
       password_confirm: "Password confirmation"
+      reset_password: "Reset password"
       update: "Update password"
     new:
       forgot_password: "Forgot password"
@@ -54,6 +54,7 @@ en:
     index:
       users: "All Users"
       avatar: "Avatar"
+      email: "Email"
       delete: "Delete"
     new:
       register: "Register"
