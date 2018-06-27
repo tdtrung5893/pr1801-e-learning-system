@@ -16,8 +16,6 @@ class User < ApplicationRecord
             allow_blank: true
   validates :username,  presence: true, length: { maximum: Settings.user.validates.name_maximum }
 
-  before_save :downcase_email
-
   scope :load_data, -> { select(:id, :avatar, :username, :email) }
 
   def User.new_token
@@ -67,11 +65,5 @@ class User < ApplicationRecord
     if avatar.size > Settings.user.avatar_size.megabytes
       errors.add(:avatar, t(".avatar"))
     end
-  end
-
-  private
-
-  def downcase_email
-    self.email = email.downcase!
   end
 end
