@@ -50,21 +50,21 @@ class UsersController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit(:avatar, :username, :email, :password,
-        :password_confirmation)
-    end
+  def user_params
+    params.require(:user).permit :avatar, :username, :email, :password,
+      :password_confirmation
+  end
 
-    def set_user
-      @user = User.find_by id: params[:id]
-      redirect_to root_url if @user.nil?
-    end
+  def set_user
+    @user = User.find_by id: params[:id]
+    redirect_to root_url if @user.nil?
+  end
 
-    def correct_user
-      redirect_to root_url unless current_user? @user
-    end
+  def correct_user
+    redirect_to root_url unless current_user? @user
+  end
 
-    def admin_user
-      redirect_to root_url unless current_user.role?
-    end
+  def admin_user
+    redirect_to root_url unless current_user.role?
+  end
 end

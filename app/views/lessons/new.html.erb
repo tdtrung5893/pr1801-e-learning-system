@@ -1,0 +1,30 @@
+<% provide :title, t(".new_lesson") %>
+<div class="container margin-header margin-footer">
+  <h1 class="title"><%= t ".new_lesson" %></h1>
+  <div>
+    <div class="offset-lg-3">
+      <%= form_for @lesson, html: {class: "form-horizontal"} do |f| %>
+        <div class="form-group">
+          <%= f.label :category_id, t(".category"), class: "col-md-4 control-label" %>
+          <div class="col-lg-9">
+            <%= f.select :category_id, options_for_select(@categories.collect {
+              |category| [category.name, category.id] }) %>
+          </div>
+        </div>
+
+        <div class="form-group mb-4">
+          <%= f.label :name, t(".name_lesson"), class: "col-md-4 control-label" %>
+          <div class="col-lg-9">
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-9">
+            <%= f.submit t(".new_lesson"), class: "btn btn-success btn-register" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
