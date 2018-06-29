@@ -1,22 +1,36 @@
 en:
+  category_created: "Category created!"
   check_expiration: "Password reset has expired."
+  create_failed: "Create failed!"
   email_blank: "Can't be empty"
+  lesson_create: "Lesson created!"
+  lesson_create_fail: "Lesson create failed!"
   login_failed: "Invalid email/password combination!"
   login_success: "Welcome to THT E-Learning!"
   login_warning: "Please log in!"
   logout_success: "You are logged out!"
   profile_updated: "Profile updated"
   register_failed: "Register failed!"
-  register_success: "Register Success!"
+  register_success: "Register success!"
   reset_success: "Password has been reset."
   sent_email_success: "Email sent with password reset instructions"
   sent_error: "Email address not found"
   user_deleted: "User deleted"
-  lesson_create: "Lesson created!"
-  lesson_create_fail: "Lesson create failed!"
 
+  categories:
+    index:
+      next: "Next"
+      previous: "Previous"
+      start_learn: "Start Learn"
+      welcome: "Welcome to THT E-Learning system"
+    new:
+      category_description: "Category description:"
+      category_name: "Category name:"
+      create: "Create"
+      create_new_categories: "Create new categories"
   layouts:
     header:
+      add_course: "Add course"
       advance: "Advance"
       basic: "Basic"
       course: "Course"
@@ -46,12 +60,6 @@ en:
       remember: "Remember me"
       user_name: "User name"
       username_ph_login: "Enter your name"
-  static_pages:
-    home:
-      next: "Next"
-      previous: "Previous"
-      start_learn: "Start Learn"
-      welcome: "Welcome to THT E-Learning system"
   users:
     form:
       email: "Email"

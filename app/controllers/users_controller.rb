@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       flash[:success] = t "register_success"
       redirect_to @user
     else
-      flash[:success] = t "register_failed"
+      flash[:danger] = t "register_failed"
       render :new
     end
   end
@@ -65,7 +65,4 @@ class UsersController < ApplicationController
     redirect_to root_url unless current_user? @user
   end
 
-  def admin_user
-    redirect_to root_url unless current_user.role?
-  end
 end
