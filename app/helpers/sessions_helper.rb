@@ -11,6 +11,10 @@ module SessionsHelper
     current_user.present?
   end
 
+  def current_user? user
+    user == current_user
+  end
+
   def logged_in_user
     unless logged_in?
       store_location

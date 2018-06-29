@@ -12,6 +12,8 @@ vi:
   sent_email_success: "Email đã được gửi thành công. Hãy kiểm tra email của bạn!"
   sent_error: "Không tìm thấy địa chỉ emai"
   user_deleted: "Xóa người dùng thành công"
+  lesson_create: "Tạo bài học thành công!"
+  lesson_create_fail: "Đã có lỗi xảy ra khi tạo bài học mới!"
 
   layouts:
     header:
@@ -92,3 +94,8 @@ vi:
   models:
     user:
       avatar: "Dung lượng ảnh đại diện không được quá 5MB"
+  lessons:
+    new:
+      new_lesson: "Bài học mới"
+      category: "Khóa học"
+      name_lesson: "Tên bài học"

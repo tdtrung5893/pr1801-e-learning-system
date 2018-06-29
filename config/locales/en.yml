@@ -12,6 +12,8 @@ en:
   sent_email_success: "Email sent with password reset instructions"
   sent_error: "Email address not found"
   user_deleted: "User deleted"
+  lesson_create: "Lesson created!"
+  lesson_create_fail: "Lesson create failed!"
 
   layouts:
     header:
@@ -92,3 +94,8 @@ en:
   models:
     user:
       avatar: "Should be less than 5MB"
+  lessons:
+    new:
+      new_lesson: "New lesson"
+      category: "Category"
+      name_lesson: "Lesson name"
