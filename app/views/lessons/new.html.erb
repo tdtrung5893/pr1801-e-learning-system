@@ -3,15 +3,21 @@
   <h1 class="title"><%= t ".new_lesson" %></h1>
   <div>
     <div class="offset-lg-3">
-      <%= form_for @lesson, html: {class: "form-horizontal"} do |f| %>
-        <div class="form-group">
-          <%= f.label :category_id, t(".category"), class: "col-md-4 control-label" %>
-          <div class="col-lg-9">
-            <%= f.select :category_id, options_for_select(@categories.collect {
-              |category| [category.name, category.id] }) %>
-          </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle category-option" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t ".category" %>
+        </a>
+        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownBlog">
+          <% @categories.each do |category| %>
+            <%= link_to category.name, new_category_lesson_path(
+              :category_id => category.id), class: "dropdown-item" %>
+          <% end %>
         </div>
-
+      </div>
+      <div class="col-md-5 category-name">
+        <%= @category.name %>
+      </div>
+      <%= form_for([@category, @lesson], html: {class: "form-horizontal"}) do |f| %>
         <div class="form-group mb-4">
           <%= f.label :name, t(".name_lesson"), class: "col-md-4 control-label" %>
           <div class="col-lg-9">

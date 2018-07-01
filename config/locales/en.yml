@@ -97,5 +97,8 @@ en:
   lessons:
     new:
       new_lesson: "New lesson"
-      category: "Category"
+      category: "Select category"
       name_lesson: "Lesson name"
+    index:
+      categories: "Categories"
+      new_lesson: "Add new lesson"

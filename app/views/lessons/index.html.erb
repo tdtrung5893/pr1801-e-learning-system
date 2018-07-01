@@ -1,0 +1,16 @@
+<%= provide :title, @category.name %>
+<div class="container">
+  <div class="offset-md-1 margin-header">
+    <div class="lesson-header">
+      <%= link_to t(".categories"), root_url, class: "lesson-header" %>
+      <span>></span>
+      <span><%= @category.name %></span>
+      <span><%= link_to t(".new_lesson"), new_category_lesson_path, class: "btn btn-success text-btn" %></span>
+    </div>
+  </div>
+  <div class="offset-md-4 col-md-3 margin-footer mt-3">
+    <% @lessons.each do |lesson| %>
+      <%= link_to lesson.name, "#", class: "lesson-title" %>
+    <% end %>
+  </div>
+</div>
