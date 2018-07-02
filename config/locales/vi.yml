@@ -97,5 +97,8 @@ vi:
   lessons:
     new:
       new_lesson: "Bài học mới"
-      category: "Khóa học"
+      category: "Chọn khóa học"
       name_lesson: "Tên bài học"
+    index:
+      categories: "Các khóa học"
+      new_lesson: "Thêm bài học mới"

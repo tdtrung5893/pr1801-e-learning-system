@@ -217,9 +217,9 @@ body {
 
 /* Error */
 #error_explanation {
-  color: red;
+  color: $red;
   ul {
-    color: red;
+    color: $red;
     margin: 0 0 30px 0;
   }
 }
@@ -231,3 +231,59 @@ body {
   }
 }
 */
+
+.lesson-title {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  color: $blue;
+  background-color: $light-gray;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border: solid 3px $red;
+  border-radius: 30px;
+}
+
+.lesson-title:hover {
+  background-color: $white;
+  color: $light-blue;
+  text-decoration: none;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}
+
+.lesson-option {
+  font-size: 17px;
+}
+
+.lesson-header {
+  color: $blue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lesson-header a {
+  color: $blue;
+}
+
+.lesson-header a:hover{
+  color: $light-blue;
+  text-decoration: none;
+}
+
+.lesson-header .text-btn {
+  float: right;
+  color: $white;
+}
+
+.category-option {
+  cursor: pointer;
+}
+
+.category-name {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem 1rem;
+}

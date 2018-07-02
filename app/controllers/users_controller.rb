@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.load_data.paginate(page: params[:page], per_page: Settings.users.page)
+    @categories = Category.load_category
   end
 
   def new
