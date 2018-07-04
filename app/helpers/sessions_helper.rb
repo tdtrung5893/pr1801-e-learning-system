@@ -61,4 +61,10 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
+
+  private
+
+  def admin_user
+    redirect_to root_url unless current_user.role?
+  end
 end

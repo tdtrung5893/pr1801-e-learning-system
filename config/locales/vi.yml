@@ -1,22 +1,36 @@
 vi:
+  category_created: "Tạo khóa học thành công!"
   check_expiration: "Đường dẫn tạo lại email đã hết hạn."
-  email_blank: "Nhập email để tiếp tục"
+  create_failed: "Tạo khóa học thất bại!"
+  email_blank: "Nhập email để tiếp tục."
+  lesson_create: "Tạo bài học thành công!"
+  lesson_create_fail: "Đã có lỗi xảy ra khi tạo bài học mới!"
   login_failed: "Mật khẩu hoặc email không hợp lệ!"
   login_success: "Chào mừng bạn đến với lớp học trực tuyến THT!"
-  login_warning: "Đăng nhập để tiếp tục"
+  login_warning: "Đăng nhập để tiếp tục."
   logout_success: "Đăng xuất thành công!"
-  profile_updated: "Hồ sơ cập nhật thành công"
+  profile_updated: "Hồ sơ cập nhật thành công!"
   register_failed: "Đăng ký thất bại!"
   register_success: "Đăng ký thành công!"
-  reset_success: "Password đã được tạo mới thành công"
+  reset_success: "Password đã được tạo mới thành công!"
   sent_email_success: "Email đã được gửi thành công. Hãy kiểm tra email của bạn!"
   sent_error: "Không tìm thấy địa chỉ emai"
   user_deleted: "Xóa người dùng thành công"
-  lesson_create: "Tạo bài học thành công!"
-  lesson_create_fail: "Đã có lỗi xảy ra khi tạo bài học mới!"
 
+  categories:
+    index:
+      next: "Sau"
+      previous: "Trước"
+      start_learn: "Bắt đầu học"
+      welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
+    new:
+      category_description: "Mô tả khóa học:"
+      category_name: "Tên khóa học:"
+      create: "Tạo"
+      create_new_categories: "Tạo khóa học mới"
   layouts:
     header:
+      add_course: "Thêm khóa học"
       advance: "Khóa học từ vựng nâng cao"
       basic: "Khóa học từ vựng cơ bản"
       course: "Khóa học"
@@ -46,12 +60,6 @@ vi:
       remember: "Ghi nhớ lần đăng nhập này trên máy tính"
       user_name: "Tên người dùng"
       username_ph_login: "Nhập tên người dùng"
-  static_pages:
-    home:
-      next: "Sau"
-      previous: "Trước"
-      start_learn: "Bắt đầu học"
-      welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
   users:
     form:
       email: "Email"
