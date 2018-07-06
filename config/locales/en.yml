@@ -16,6 +16,12 @@ en:
   sent_email_success: "Email sent with password reset instructions"
   sent_error: "Email address not found"
   user_deleted: "User deleted"
+  lesson_create: "Lesson created!"
+  lesson_create_fail: "Lesson create failed!"
+  update_lesson: "Lesson updated successfully!"
+  update_lesson_failed: "Lesson update failed!"
+  lesson_deleted: "Lesson deleted successfully!"
+  delete_lesson_failed: "Lesson delete failed!"
 
   categories:
     index:
@@ -30,7 +36,7 @@ en:
       create_new_categories: "Create new categories"
   layouts:
     header:
-      add_course: "Add course"
+      admin: "Admin"
       advance: "Advance"
       basic: "Basic"
       course: "Course"
@@ -40,6 +46,7 @@ en:
       log_out: "Log out"
       register: "Register"
       search: "Search.."
+      user_list: "User list"
   password_resets:
     edit:
       password: "New password"
@@ -69,10 +76,8 @@ en:
     index:
       avatar: "Avatar"
       email: "Email"
-      delete: "Delete"
       user_name: "User Name"
       users: "All Users"
-      you_sure: "You sure?"
     new:
       email_ph: "Enter user email"
       password: "Password"
@@ -103,10 +108,39 @@ en:
     user:
       avatar: "Should be less than 5MB"
   lessons:
-    new:
-      new_lesson: "New lesson"
-      category: "Select category"
-      name_lesson: "Lesson name"
     index:
       categories: "Categories"
-      new_lesson: "Add new lesson"
+  admin:
+    lessons:
+      new:
+        new_lesson: "New lesson"
+        category: "Select category"
+        name_lesson: "Lesson name"
+      index:
+        categories: "Categories"
+        new_lesson: "Add new lesson"
+      edit:
+        name_lesson: "Lesson name"
+        edit_lesson: "Edit lesson"
+        edit: "Edit"
+        delete: "Delete"
+    users:
+      index:
+        avatar: "Avatar"
+        email: "Email"
+        delete: "Delete"
+        user_name: "User Name"
+        users: "All Users"
+        you_sure: "You sure?"
+    categories:
+      index:
+        new_category: "New category"
+        next: "Next"
+        previous: "Previous"
+        start_learn: "Start Learn"
+        welcome: "Welcome to THT E-Learning system"
+      new:
+        category_description: "Category description:"
+        category_name: "Category name:"
+        create: "Create"
+        create_new_categories: "Create new category"
