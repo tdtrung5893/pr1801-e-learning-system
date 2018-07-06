@@ -9,15 +9,16 @@
         </a>
         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownBlog">
           <% @categories.each do |category| %>
-            <%= link_to category.name, new_category_lesson_path(
-              :category_id => category.id), class: "dropdown-item" %>
+            <%= link_to category.name, new_category_lesson_path(category.id),
+              class: "dropdown-item" %>
           <% end %>
         </div>
       </div>
       <div class="col-md-5 category-name">
         <%= @category.name %>
       </div>
-      <%= form_for([@category, @lesson], html: {class: "form-horizontal"}) do |f| %>
+      <%= form_for([:admin, @category, @lesson],
+        html: {class: "form-horizontal"}) do |f| %>
         <div class="form-group mb-4">
           <%= f.label :name, t(".name_lesson"), class: "col-md-4 control-label" %>
           <div class="col-lg-9">

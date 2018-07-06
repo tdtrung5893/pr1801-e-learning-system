@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    @categories = Category.load_category
   end
 
   def create

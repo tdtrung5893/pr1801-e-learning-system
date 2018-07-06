@@ -5,11 +5,20 @@
       <%= link_to t(".categories"), root_url, class: "lesson-header" %>
       <span>></span>
       <span><%= @category.name %></span>
+      <span><%= link_to t(".new_lesson"), new_admin_category_lesson_path,
+        class: "btn btn-success text-btn" %></span>
     </div>
   </div>
   <div class="offset-md-4 col-md-3 margin-footer mt-3">
     <% @category.lessons.each do |lesson| %>
       <%= link_to lesson.name, "#", class: "lesson-title" %>
+      <% if current_user.role? %>
+        <%= link_to t(".edit"), edit_admin_category_lesson_path(lesson),
+          class: "lesson-option" %> |
+        <%= link_to t(".delete"), admin_category_lesson_path(@category, lesson),
+          method: :delete, data: {confirm: "Are you sure?"},
+            class: "lesson-option" %>
+      <% end %>
     <% end %>
   </div>
 </div>

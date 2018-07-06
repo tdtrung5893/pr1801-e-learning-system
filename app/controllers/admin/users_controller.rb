@@ -1,7 +1,8 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :get_user, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   def index
     @users = User.load_data.paginate(page: params[:page], per_page: gettings.users.page)
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
       flash[:success] = t "register_success"
       redirect_to @user
     else
-      flash[:danger] = t "register_failed"
+      flash[:success] = t "register_failed"
       render :new
     end
   end
@@ -39,6 +40,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    if @user.destroy
+      flash[:success] = t "user_deleted"
+      redirect_to admin_users_url
+    else
+      render :index
+    end
   end
 
   private

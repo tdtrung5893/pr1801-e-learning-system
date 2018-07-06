@@ -2,7 +2,7 @@
 <div class="container margin-header">
   <h1 class="title"><%= t ".create_new_categories" %></h1>
   <div>
-    <%= form_for @category do |f| %>
+    <%= form_for [:admin, @category] do |f| %>
       <%= render "shared/error_messages", object: f.object %>
 
       <div class="form-group">
