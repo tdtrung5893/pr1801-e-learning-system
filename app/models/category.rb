@@ -4,5 +4,5 @@ class Category < ApplicationRecord
 
   validates :name, presence: true
 
-  scope :load_data_category, -> {select :id, :name, :description}
+  scope :load_category, -> {select :id, :name, :description}
 end

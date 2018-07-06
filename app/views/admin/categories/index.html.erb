@@ -41,6 +41,10 @@
           <div class="card-footer">
             <%= link_to t(".start_learn"), category_lessons_path(category),
               class: "btn btn-primary" %>
+            <%= link_to t(".edit"), edit_admin_category_path(category),
+              class:"btn btn-success" %>
+            <%= link_to t(".delete"), admin_category_path(category), method: :delete,
+              data: {confirm: t(".you_sure")}, class:"btn btn-danger" %>
           </div>
         </div>
       </div>

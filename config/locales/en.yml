@@ -1,5 +1,9 @@
 en:
   category_created: "Category created!"
+  category_delete_failed: "Delete failed"
+  category_deleted: "Category deleted!"
+  category_update_failed: "Update failed"
+  category_updated: "Category updated!"
   check_expiration: "Password reset has expired."
   create_failed: "Create failed!"
   email_blank: "Can't be empty"
@@ -23,17 +27,32 @@ en:
   lesson_deleted: "Lesson deleted successfully!"
   delete_lesson_failed: "Lesson delete failed!"
 
+  admin:
+    categories:
+      form:
+        category_description: "Category description:"
+        category_name: "Category name:"
+      edit:
+        edit_categories: "Edit categories"
+        update: "Update"
+      index:
+        delete: "Delete"
+        edit: "Edit"
+        next: "Next"
+        previous: "Previous"
+        start_learn: "Start Learn"
+        welcome: "Welcome to THT E-Learning system"
+        you_sure: "Are you sure?"
+      new:
+        create: "Create"
+        create_new_categories: "Create new categories"
+
   categories:
     index:
       next: "Next"
       previous: "Previous"
       start_learn: "Start Learn"
       welcome: "Welcome to THT E-Learning system"
-    new:
-      category_description: "Category description:"
-      category_name: "Category name:"
-      create: "Create"
-      create_new_categories: "Create new categories"
   layouts:
     header:
       admin: "Admin"

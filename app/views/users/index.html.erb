@@ -12,6 +12,12 @@
         <td><%= image_tag user.avatar, class: "thumbnail" %></td>
         <td><%= link_to user.username, user %></td>
         <td><%= link_to user.email, user %></td>
+        <% if current_user.role? && !current_user?(user) %>
+          <td class="text-center bg-warning">
+            <%= link_to t(".delete"), user, method: :delete,
+              data: {confirm: t(".you_sure")} %>
+          </td>
+        <% end %>
       </tr>
     <% end %>
   </table>

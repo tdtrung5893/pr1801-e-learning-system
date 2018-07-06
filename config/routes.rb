@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get "words/index"
 
+  resources :categories, shallow: true do
+    resources :lessons
+  end
+
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :categories, except: [:new, :create, :edit, :update] do
