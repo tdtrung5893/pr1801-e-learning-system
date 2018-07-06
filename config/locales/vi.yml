@@ -1,5 +1,9 @@
 vi:
   category_created: "Tạo khóa học thành công!"
+  category_delete_failed: "Xóa thất bại"
+  category_deleted: "Xóa khóa học thành công!"
+  category_update_failed: "Cập nhật thất bại"
+  category_updated: "Cập nhật khóa học thành công!"
   check_expiration: "Đường dẫn tạo lại email đã hết hạn."
   create_failed: "Tạo khóa học thất bại!"
   email_blank: "Nhập email để tiếp tục."
@@ -17,17 +21,32 @@ vi:
   sent_error: "Không tìm thấy địa chỉ emai"
   user_deleted: "Xóa người dùng thành công"
 
+  admin:
+    categories:
+      form:
+        category_description: "Mô tả khóa học:"
+        category_name: "Tên khóa học:"
+      edit:
+        edit_categories: "Chỉnh sửa khóa học"
+        update: "Cập nhật"
+      index:
+        delete: "Xóa"
+        edit: "Sửa"
+        next: "Sau"
+        previous: "Trước"
+        start_learn: "Bắt đầu học"
+        welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
+        you_sure: "Bạn đã chắc chắn?"
+      new:
+        create: "Tạo"
+        create_new_categories: "Tạo khóa học mới"
+
   categories:
     index:
       next: "Sau"
       previous: "Trước"
       start_learn: "Bắt đầu học"
       welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
-    new:
-      category_description: "Mô tả khóa học:"
-      category_name: "Tên khóa học:"
-      create: "Tạo"
-      create_new_categories: "Tạo khóa học mới"
   layouts:
     header:
       add_course: "Thêm khóa học"
