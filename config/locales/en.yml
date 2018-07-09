@@ -28,6 +28,10 @@ en:
   update_lesson_failed: "Lesson update failed!"
   user_deleted: "User deleted"
   word_added: "Word added!"
+  word_delete_failed: "Delete word failed!"
+  word_deleted: "Word deleted!"
+  word_update_failed: "Word update failed!"
+  word_updated: "Word updated!"
 
   admin:
     categories:
@@ -35,7 +39,7 @@ en:
         category_description: "Category description:"
         category_name: "Category name:"
       edit:
-        edit_categories: "Edit categories"
+        edit_category: "Edit category"
         update: "Update"
       index:
         delete: "Delete"
@@ -49,22 +53,33 @@ en:
         category_description: "Category description:"
         category_name: "Category name:"
         create: "Create"
-        create_new_categories: "Create new categories"
+        create_new_category: "Create new category"
     words:
+      form:
+        word_description: "Word description:"
+        word_name: "Word name:"
+        word_question: "Word question:"
+      edit:
+        edit_word: "Edit word"
+        update: "Update"
       index:
         add_word: "Add word"
         alphabet: "Alphabet"
+        delete: "Delete"
+        edit: "Edit"
         go: "Go"
         search: "Search"
         word_groups: "Word groups"
         word_list: "Word List"
         words: "Words"
+        you_sure: "You sure?"
       new:
         add: "Add"
         add_word: "Add word"
-        word_description: "Word description"
-        word_name: "Word name"
-        word_question: "Word question"
+        lesson: "Lesson:"
+        word_description: "Word description:"
+        word_name: "Word name:"
+        word_question: "Word question:"
     lessons:
       new:
         category: "Select category"
@@ -72,7 +87,11 @@ en:
         new_lesson: "New lesson"
       index:
         categories: "Categories"
+        delete: "Delete"
+        edit: "Edit"
         new_lesson: "Add new lesson"
+        word_list: "Word list"
+        you_sure: "You sure?"
       edit:
         delete: "Delete"
         edit: "Edit"
@@ -171,5 +190,6 @@ en:
   lessons:
     index:
       categories: "Categories"
+      word_list: "Word list"
     show:
       submit: "Submit"

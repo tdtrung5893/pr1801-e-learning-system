@@ -1,13 +1,22 @@
-<%= form_for [:admin, @category] do |f| %>
+<%= form_for [:admin, @category, @lesson, @word] do |f| %>
   <%= render "shared/error_messages", object: f.object %>
   <div class="form-group">
-    <%= f.label :name, t(".category_name"), class: "offset-3 col-3 col-form-label" %>
+    <%= f.label :name, t(".word_name"),
+      class: "offset-3 col-3 col-form-label" %>
     <div class="offset-3 col-6">
       <%= f.text_field :name, class: "form-control mb-3"  %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :description, t(".category_description"), class: "offset-3 col-3 col-form-label" %>
+    <%= f.label :question, t(".word_question"),
+      class: "offset-3 col-3 col-form-label" %>
+    <div class="offset-3 col-6">
+      <%= f.text_field :question, class: "form-control mb-3"  %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, t(".word_description"),
+      class: "offset-3 col-3 col-form-label" %>
     <div class="offset-3 col-6">
       <%= f.text_area :description, class: "form-control mb-3"  %>
     </div>

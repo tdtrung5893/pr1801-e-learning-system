@@ -3,5 +3,5 @@ class Word < ApplicationRecord
   has_many :user_words
   belongs_to :lesson
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: {case_sensitive: false}
 end
