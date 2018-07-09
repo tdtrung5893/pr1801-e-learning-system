@@ -287,3 +287,11 @@ body {
   position: relative;
   padding: 0.5rem 1rem;
 }
+
+input.radio_word, .checkbox_answer {
+  width: inherit;
+}
+
+.list-answer {
+  list-style: none;
+}

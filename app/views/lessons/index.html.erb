@@ -9,7 +9,8 @@
   </div>
   <div class="offset-md-4 col-md-3 margin-footer mt-3">
     <% @category.lessons.each do |lesson| %>
-      <%= link_to lesson.name, "#", class: "lesson-title" %>
+      <%= link_to lesson.name, category_lesson_path(id: lesson.id),
+        class: "lesson-title" %>
     <% end %>
   </div>
 </div>

@@ -1,0 +1,20 @@
+<div class="container margin-header margin-footer">
+  <div class="fields">
+    <%= form_for :user_word, url: user_words_path do |f| %>
+      <% @words.each_with_index do |w, index| %>
+        <li class="list-answer">
+          <%= index + 1 %>)
+          <%= w.question %>
+        </li>
+        <br/>
+        <% w.answers.each do |ans| %>
+          <li class="list-answer">
+            <%= f.radio_button w.id, ans.id %>
+            <%= ans.answer %>
+          </li>
+        <% end %>
+      <% end %>
+      <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

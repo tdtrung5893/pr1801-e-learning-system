@@ -9,10 +9,8 @@ Rails.application.routes.draw do
 
   get "words/index"
 
-  resources :categories, shallow: true do
-    resources :lessons
-  end
-
+  resources :words
+  resources :user_words, only: [:index, :create]
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :categories, except: [:new, :create, :edit, :update] do
@@ -22,7 +20,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :categories do
-      resources :lessons, except: [:show]
+      resources :lessons
     end
   end
 end

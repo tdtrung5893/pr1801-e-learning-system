@@ -13,7 +13,7 @@
     <% @category.lessons.each do |lesson| %>
       <%= link_to lesson.name, "#", class: "lesson-title" %>
       <% if current_user.role? %>
-        <%= link_to t(".edit"), edit_admin_category_lesson_path(lesson),
+        <%= link_to t(".edit"), edit_admin_category_lesson_path(id: lesson.id),
           class: "lesson-option" %> |
         <%= link_to t(".delete"), admin_category_lesson_path(@category, lesson),
           method: :delete, data: {confirm: "Are you sure?"},
