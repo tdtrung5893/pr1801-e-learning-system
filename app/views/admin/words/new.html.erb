@@ -1,0 +1,47 @@
+<%= provide :title, t(".add_word") %>
+<div class="container margin-header">
+  <h1 class="title"><%= t ".add_word" %></h1>
+  <div class="offset-sm-3">
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle category-option" id="navbarDropdownBlog"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= t ".lesson" %>
+      </a>
+      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownBlog">
+        <% @category.lessons.each do |lesson| %>
+          <%= link_to lesson.name, new_admin_category_lesson_word_path(lesson),
+            class: "dropdown-item" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-6 category-name">
+      <%= @lesson.name %>
+    </div>
+    <%= form_for [:admin, @category, @lesson, @word] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="form-group">
+        <%= f.label :name, t(".word_name"), class: "col-sm-3 col-form-label" %>
+        <div class="col-sm-8">
+          <%= f.text_field :name, class: "form-control mb-3" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :question, t(".word_question"), class: "col-sm-3 col-form-label" %>
+        <div class="col-sm-8">
+          <%= f.text_field :question, class: "form-control mb-3" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :description, t(".word_description"), class: "col-sm-3 col-form-label" %>
+        <div class="col-sm-8">
+          <%= f.text_area :description, class: "form-control mb-3" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="offset-sm-6 col-sm-2">
+          <%= f.submit t(".add"), class: "btn btn-success btn-register" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

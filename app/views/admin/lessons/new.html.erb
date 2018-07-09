@@ -9,7 +9,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownBlog">
           <% @categories.each do |category| %>
-            <%= link_to category.name, new_category_lesson_path(category.id),
+            <%= link_to category.name, new_admin_category_lesson_path(category.id),
               class: "dropdown-item" %>
           <% end %>
         </div>

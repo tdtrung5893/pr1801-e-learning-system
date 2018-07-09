@@ -1,4 +1,5 @@
 en:
+  add_failed: "Add word failed!"
   category_created: "Category created!"
   category_delete_failed: "Delete failed"
   category_deleted: "Category deleted!"
@@ -6,9 +7,13 @@ en:
   category_updated: "Category updated!"
   check_expiration: "Password reset has expired."
   create_failed: "Create failed!"
+  delete_lesson_failed: "Lesson delete failed!"
   email_blank: "Can't be empty"
+  exam_complete: "Exam complete"
+  exam_error: "An error occurred while doing lesson"
   lesson_create: "Lesson created!"
   lesson_create_fail: "Lesson create failed!"
+  lesson_deleted: "Lesson deleted successfully!"
   login_failed: "Invalid email/password combination!"
   login_success: "Welcome to THT E-Learning!"
   login_warning: "Please log in!"
@@ -19,15 +24,10 @@ en:
   reset_success: "Password has been reset."
   sent_email_success: "Email sent with password reset instructions"
   sent_error: "Email address not found"
-  user_deleted: "User deleted"
-  lesson_create: "Lesson created!"
-  lesson_create_fail: "Lesson create failed!"
   update_lesson: "Lesson updated successfully!"
   update_lesson_failed: "Lesson update failed!"
-  lesson_deleted: "Lesson deleted successfully!"
-  delete_lesson_failed: "Lesson delete failed!"
-  exam_complete: "Exam complete"
-  exam_error: "An error occurred while doing lesson"
+  user_deleted: "User deleted"
+  word_added: "Word added!"
 
   admin:
     categories:
@@ -46,8 +46,46 @@ en:
         welcome: "Welcome to THT E-Learning system"
         you_sure: "Are you sure?"
       new:
+        category_description: "Category description:"
+        category_name: "Category name:"
         create: "Create"
         create_new_categories: "Create new categories"
+    words:
+      index:
+        add_word: "Add word"
+        alphabet: "Alphabet"
+        go: "Go"
+        search: "Search"
+        word_groups: "Word groups"
+        word_list: "Word List"
+        words: "Words"
+      new:
+        add: "Add"
+        add_word: "Add word"
+        word_description: "Word description"
+        word_name: "Word name"
+        word_question: "Word question"
+    lessons:
+      new:
+        category: "Select category"
+        name_lesson: "Lesson name"
+        new_lesson: "New lesson"
+      index:
+        categories: "Categories"
+        new_lesson: "Add new lesson"
+      edit:
+        delete: "Delete"
+        edit: "Edit"
+        edit_lesson: "Edit lesson"
+        name_lesson: "Lesson name"
+    users:
+      index:
+        avatar: "Avatar"
+        delete: "Delete"
+        email: "Email"
+        user_name: "User Name"
+        users: "All Users"
+        you_sure: "You sure?"
 
   categories:
     index:
@@ -97,8 +135,10 @@ en:
     index:
       avatar: "Avatar"
       email: "Email"
+      delete: "Delete"
       user_name: "User Name"
       users: "All Users"
+      you_sure: "Are you sure?"
     new:
       email_ph: "Enter user email"
       password: "Password"
@@ -133,37 +173,3 @@ en:
       categories: "Categories"
     show:
       submit: "Submit"
-  admin:
-    lessons:
-      new:
-        new_lesson: "New lesson"
-        category: "Select category"
-        name_lesson: "Lesson name"
-      index:
-        categories: "Categories"
-        new_lesson: "Add new lesson"
-      edit:
-        name_lesson: "Lesson name"
-        edit_lesson: "Edit lesson"
-        edit: "Edit"
-        delete: "Delete"
-    users:
-      index:
-        avatar: "Avatar"
-        email: "Email"
-        delete: "Delete"
-        user_name: "User Name"
-        users: "All Users"
-        you_sure: "You sure?"
-    categories:
-      index:
-        new_category: "New category"
-        next: "Next"
-        previous: "Previous"
-        start_learn: "Start Learn"
-        welcome: "Welcome to THT E-Learning system"
-      new:
-        category_description: "Category description:"
-        category_name: "Category name:"
-        create: "Create"
-        create_new_categories: "Create new category"

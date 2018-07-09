@@ -1,4 +1,5 @@
 vi:
+  add_failed: "Thêm từ thất bại!"
   category_created: "Tạo khóa học thành công!"
   category_delete_failed: "Xóa thất bại"
   category_deleted: "Xóa khóa học thành công!"
@@ -6,9 +7,13 @@ vi:
   category_updated: "Cập nhật khóa học thành công!"
   check_expiration: "Đường dẫn tạo lại email đã hết hạn."
   create_failed: "Tạo khóa học thất bại!"
+  delete_lesson_failed: "Xóa bài học thất bại!"
   email_blank: "Nhập email để tiếp tục."
+  exam_complete: "Bạn đã hoàn thành bài kiểm tra"
+  exam_error: "Đã có lỗi xảy ra trong quá trình làm bài kiểm tra"
   lesson_create: "Tạo bài học thành công!"
   lesson_create_fail: "Đã có lỗi xảy ra khi tạo bài học mới!"
+  lesson_deleted: "Xóa bài học thành công!"
   login_failed: "Mật khẩu hoặc email không hợp lệ!"
   login_success: "Chào mừng bạn đến với lớp học trực tuyến THT!"
   login_warning: "Đăng nhập để tiếp tục."
@@ -19,9 +24,10 @@ vi:
   reset_success: "Password đã được tạo mới thành công!"
   sent_email_success: "Email đã được gửi thành công. Hãy kiểm tra email của bạn!"
   sent_error: "Không tìm thấy địa chỉ emai"
+  update_lesson: "Cập nhật bài học thành công!"
+  update_lesson_failed: "Cập nhật bài học thất bại!"
   user_deleted: "Xóa người dùng thành công"
-  exam_complete: "Bạn đã hoàn thành bài kiểm tra"
-  exam_error: "Đã có lỗi xảy ra trong quá trình làm bài kiểm tra"
+  word_added: "Thêm từ thành công!"
 
   admin:
     categories:
@@ -40,8 +46,46 @@ vi:
         welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
         you_sure: "Bạn đã chắc chắn?"
       new:
+        category_description: "Mô tả khóa học:"
+        category_name: "Tên khóa học:"
         create: "Tạo"
         create_new_categories: "Tạo khóa học mới"
+    words:
+      index:
+        add_word: "Thêm từ"
+        alphabet: "Bảng chữ cái"
+        go: "Tìm"
+        search: "Tìm kiếm"
+        word_groups: "Nhóm từ"
+        word_list: "Danh sách từ"
+        words: "Từ"
+      new:
+        add: "Thêm"
+        add_word: "Thêm từ"
+        word_description: "Mô tả từ"
+        word_name: "Tên từ"
+        word_question: "Câu hỏi cho từ"
+    lessons:
+      new:
+        category: "Select category"
+        name_lesson: "Lesson name"
+        new_lesson: "New lesson"
+      index:
+        categories: "Categories"
+        new_lesson: "Add new lesson"
+      edit:
+        delete: "Delete"
+        edit: "Edit"
+        edit_lesson: "Edit lesson"
+        name_lesson: "Lesson name"
+    users:
+      index:
+        avatar: "Avatar"
+        delete: "Delete"
+        email: "Email"
+        user_name: "User Name"
+        users: "All Users"
+        you_sure: "You sure?"
 
   categories:
     index:
@@ -51,7 +95,7 @@ vi:
       welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
   layouts:
     header:
-      add_course: "Thêm khóa học"
+      admin: "Admin"
       advance: "Khóa học từ vựng nâng cao"
       basic: "Khóa học từ vựng cơ bản"
       course: "Khóa học"
@@ -61,6 +105,7 @@ vi:
       log_out: "Đăng xuất"
       register: "Đăng ký"
       search: "Tìm kiếm.."
+      user_list: "Danh sách người dùng"
   password_resets:
     edit:
       password: "Mật khẩu mới"
@@ -124,12 +169,7 @@ vi:
     user:
       avatar: "Dung lượng ảnh đại diện không được quá 5MB"
   lessons:
-    new:
-      new_lesson: "Bài học mới"
-      category: "Chọn khóa học"
-      name_lesson: "Tên bài học"
     index:
       categories: "Các khóa học"
-      new_lesson: "Thêm bài học mới"
     show:
       submit: "Submit"
