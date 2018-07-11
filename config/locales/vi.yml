@@ -20,6 +20,8 @@ vi:
   sent_email_success: "Email đã được gửi thành công. Hãy kiểm tra email của bạn!"
   sent_error: "Không tìm thấy địa chỉ emai"
   user_deleted: "Xóa người dùng thành công"
+  exam_complete: "Bạn đã hoàn thành bài kiểm tra"
+  exam_error: "Đã có lỗi xảy ra trong quá trình làm bài kiểm tra"
 
   admin:
     categories:
@@ -129,3 +131,5 @@ vi:
     index:
       categories: "Các khóa học"
       new_lesson: "Thêm bài học mới"
+    show:
+      submit: "Submit"

@@ -26,6 +26,8 @@ en:
   update_lesson_failed: "Lesson update failed!"
   lesson_deleted: "Lesson deleted successfully!"
   delete_lesson_failed: "Lesson delete failed!"
+  exam_complete: "Exam complete"
+  exam_error: "An error occurred while doing lesson"
 
   admin:
     categories:
@@ -129,6 +131,8 @@ en:
   lessons:
     index:
       categories: "Categories"
+    show:
+      submit: "Submit"
   admin:
     lessons:
       new:
