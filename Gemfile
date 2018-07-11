@@ -6,7 +6,7 @@ end
 gem "autoprefixer-rails", "~> 8.6", ">= 8.6.2"
 gem "bcrypt"
 gem "bootstrap", "~> 4.1.1"
-gem "bootstrap-will_paginate"
+gem "bootstrap-glyphicons"
 gem "carrierwave", "1.1.0"
 gem "coffee-rails", "~> 4.2"
 gem "config"
@@ -22,7 +22,7 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate"
-gem "bootstrap-glyphicons"
+gem "will_paginate-bootstrap4"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -31,8 +31,8 @@ group :development, :test do
 end
 
 group :production do
-  gem "pg",  "0.20.0"
   gem "fog", "1.42"
+  gem "pg",  "0.20.0"
 end
 
 group :development do

@@ -1,7 +1,9 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user, except: [:index, :show]
   before_action :admin_user
-  before_action :get_category, only: [:show, :edit, :update, :destroy]
+  before_action only: [:show, :edit, :update, :destroy] do
+    get_category params[:id]
+  end
 
   def index; end
 
@@ -48,9 +50,5 @@ class Admin::CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit :name, :description
-  end
-
-  def get_category
-    redirect_to admin_categories_path unless @category = Category.find_by(id: params[:id])
   end
 end
