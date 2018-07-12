@@ -28,6 +28,10 @@ vi:
   update_lesson_failed: "Cập nhật bài học thất bại!"
   user_deleted: "Xóa người dùng thành công"
   word_added: "Thêm từ thành công!"
+  word_delete_failed: "Xóa từ thất bại!"
+  word_deleted: "Xóa từ thành công!"
+  word_update_failed: "Cập nhật từ thất bại!"
+  word_updated: "Từ được cập nhật thành công!"
 
   admin:
     categories:
@@ -35,7 +39,7 @@ vi:
         category_description: "Mô tả khóa học:"
         category_name: "Tên khóa học:"
       edit:
-        edit_categories: "Chỉnh sửa khóa học"
+        edit_category: "Chỉnh sửa khóa học"
         update: "Cập nhật"
       index:
         delete: "Xóa"
@@ -49,22 +53,33 @@ vi:
         category_description: "Mô tả khóa học:"
         category_name: "Tên khóa học:"
         create: "Tạo"
-        create_new_categories: "Tạo khóa học mới"
+        create_new_category: "Tạo khóa học mới"
     words:
+      form:
+        word_description: "Mô tả từ:"
+        word_name: "Tên từ:"
+        word_question: "Câu hỏi cho từ:"
+      edit:
+        edit_word: "Sửa từ"
+        update: "Cập nhật"
       index:
         add_word: "Thêm từ"
         alphabet: "Bảng chữ cái"
+        delete: "Xóa"
+        edit: "Sửa"
         go: "Tìm"
         search: "Tìm kiếm"
         word_groups: "Nhóm từ"
         word_list: "Danh sách từ"
         words: "Từ"
+        you_sure: "Bạn đã chắc chắn?"
       new:
         add: "Thêm"
         add_word: "Thêm từ"
-        word_description: "Mô tả từ"
-        word_name: "Tên từ"
-        word_question: "Câu hỏi cho từ"
+        lesson: "Bài học:"
+        word_description: "Mô tả từ:"
+        word_name: "Tên từ:"
+        word_question: "Câu hỏi cho từ:"
     lessons:
       new:
         category: "Select category"
@@ -72,7 +87,11 @@ vi:
         new_lesson: "New lesson"
       index:
         categories: "Categories"
+        delete: "Xóa"
+        edit: "Sửa"
         new_lesson: "Add new lesson"
+        word_list: "Danh sách từ"
+        you_sure: "Bạn đã chắc chắn?"
       edit:
         delete: "Delete"
         edit: "Edit"
@@ -171,5 +190,6 @@ vi:
   lessons:
     index:
       categories: "Các khóa học"
+      word_list: "Danh sách từ"
     show:
       submit: "Submit"
