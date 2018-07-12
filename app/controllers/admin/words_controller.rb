@@ -4,14 +4,13 @@ class Admin::WordsController < ApplicationController
   before_action :load_lessons, only: [:new, :create]
   before_action only: [:index, :new, :edit, :create] do
     get_category params[:category_id]
-  end
-  before_action only: [:index, :new, :edit, :create] do
     get_lesson params[:lesson_id]
   end
   before_action :get_word, only: [:edit, :update, :destroy]
 
   def index
-    @words = @lesson.words.order(name: :asc).paginate page: params[:page]
+    @words = @lesson.words.search_prefix(params[:prefix]).order_name_asc.
+      paginate page: params[:page]
   end
 
   def show; end
