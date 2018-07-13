@@ -243,3 +243,23 @@ en:
       search: "Search"
       word_groups: "Word groups"
       word_list: "Word List"
+      words: "Words"
+  models:
+    user:
+      avatar: "Should be less than 5MB"
+  lessons:
+    index:
+      categories: "Categories"
+      word_list: "Word list"
+    exam:
+      submit: "Submit"
+    lesson_result:
+      result_word: "question"
+      not_select_answer: "You've not select answer!"
+      correct_answer: "(Correct answer)"
+      wrong_answer: "(Incorrect answer)"
+      your_answer: "Your answer"
+      user: "User"
+      lesson: "Lesson"
+      result: "Exam result"
+      try_again: Try again

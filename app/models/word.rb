@@ -11,7 +11,7 @@ class Word < ApplicationRecord
   scope :order_name_asc, -> {order name: :asc}
   scope :search_prefix, -> prefix {where "name like ?", "#{prefix}%"}
   scope :search_lesson, -> lesson_id {
-    where("lesson_id = ?", lesson_id) if lesson_id.present?}
+    where(lesson_id: lesson_id) if lesson_id.present?}
   scope :search_learned, -> (learned, user_id) {
     learned = if learned.present?
                 learned == "true" ? true : false

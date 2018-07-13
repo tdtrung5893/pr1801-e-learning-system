@@ -7,6 +7,11 @@ class UserWord < ApplicationRecord
 
   scope :load_user_word, -> {select :id, :user_id, :word_id, :status}
 
+  scope :by_word, -> lesson_id {
+    joins(:word).where(lesson_id: lesson_id)
+  }
+
+  scope :by_user, -> user_id { where(user_id: user_id) }
   private
 
   def check_correct
