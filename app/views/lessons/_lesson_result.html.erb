@@ -1,13 +1,18 @@
 <%= t ".user" %>: <%= link_to current_user.username, current_user %>
 <br/>
-<%= t ".result" %>: <div class="d-inline font-weight-bold text-primary point"><%= @word_correct %>/<%= @lesson.words.size %></div>
+<%= t ".result" %>: <div class="d-inline font-weight-bold text-primary point"><%= @word_correct_result %>/<%= @lesson.words.size %></div>
 <div class="title"><%= @lesson.name %></div>
-
+<div class="text-center">
+  <% if @word_correct_result == @lesson.words.size %>
+    <div class="text-success"><%= t ".lesson_success" %></div>
+  <% else %>
+    <div class="text-danger"><%= t ".lesson_failed" %></div>
+  <% end %>
+  </div>
 <div class="fields">
   <%= form_for :user_word, url: user_words_path do |f| %>
-    <%#= f.hidden_field :lesson_id, value: lesson.id %>
     <% @words.each_with_index do |w, index| %>
-      <li class="list-answer">
+      <li class="list-answer font-weight-bold">
         <%= index + 1 %>)
         <%= w.question %>
       </li>
@@ -27,7 +32,7 @@
           <div class="correct_answer">
             <%= t ".correct_answer" %>
           </div>
-        <% elsif @user_words[w.id][:status] == nil %>
+        <% elsif @user_words[w.id][:answer_id] == nil %>
           <div class="wrong_answer">
             <%= t ".not_select_answer" %>
           </div>
@@ -38,6 +43,8 @@
         <% end %>
       </div>
     <% end %>
-    <%= f.submit t(".try_again"), class: "btn btn-primary" %>
+  <% end %>
+  <% if @word_correct_result < @lesson.words.size %>
+    <%= link_to t(".try_again"), edit_category_lesson_path, class: "btn btn-success" %>
   <% end %>
 </div>

@@ -3,19 +3,38 @@ class LessonsController < ApplicationController
   before_action only: [:index, :show] do
     get_category params[:category_id]
   end
-  before_action only: :show do
+  before_action only: [:edit, :show, :get_exam] do
     get_lesson params[:id]
+  end
+
+  def edit
+    get_user_lesson @lesson
+    get_exam
   end
 
   def index
     @lessons = @category.lessons
+    if logged_in?
+      @user_lesson = current_user.user_lessons
+    end
   end
 
   def show
-    @words = @lesson.words
+    get_user_lesson @lesson
     @user_lesson = current_user.user_lessons.by_lesson(@lesson).first
+    get_exam
+  end
+
+  private
+
+  def get_user_lesson lesson
+    @user_lesson = current_user.user_lessons.by_lesson(lesson).first
+  end
+
+  def get_exam
+    @words = @lesson.words
     @user_word_result = current_user.user_words.by_word(@lesson)
-    @word_correct = @user_word_result.size
+    @word_correct_result = @user_word_result.count { |item| item.status }
     @user_words = {}
     @words.each do |word|
       found = false
@@ -31,8 +50,6 @@ class LessonsController < ApplicationController
       end
     end
   end
-
-  private
 
   def lesson_params
     params.require(:lesson).permit :category_id, :name

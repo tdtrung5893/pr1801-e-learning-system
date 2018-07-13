@@ -9,8 +9,25 @@
   </div>
   <div class="offset-md-4 col-md-3 margin-footer mt-3">
     <% @category.lessons.each do |lesson| %>
-      <%= link_to lesson.name, category_lesson_path(id: lesson.id),
-        class: "lesson-title" %>
+      <% if logged_in? %>
+        <% if @user_lesson.by_lesson(lesson.id).first.present? %>
+          <% unless @user_lesson.by_lesson(lesson.id).first.status %>
+            <%= link_to lesson.name, category_lesson_path(id: lesson.id),
+              class: "lesson-title" %>
+            <span><%= link_to t(".try_again"), edit_category_lesson_path(@category, lesson) %></span> |
+          <% else %>
+            <%= link_to lesson.name, category_lesson_path(id: lesson.id),
+              class: "lesson-title-complete" %>
+            <span class="text-success"><%= t ".lesson_completed" %></span> |
+          <% end %>
+        <% else %>
+          <%= link_to lesson.name, category_lesson_path(id: lesson.id),
+            class: "lesson-title" %>
+        <% end %>
+      <% else %>
+        <%= link_to lesson.name, category_lesson_path(id: lesson.id),
+          class: "lesson-title" %>
+      <% end %>
       <%= link_to t(".word list"), category_lesson_words_path(@category, lesson) %>
     <% end %>
   </div>
