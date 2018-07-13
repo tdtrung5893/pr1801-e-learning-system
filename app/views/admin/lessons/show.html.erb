@@ -10,7 +10,7 @@
         <% w.answers.each do |ans| %>
           <li class="list-answer">
             <%= f.radio_button w.id, ans.id %>
-            <%= ans.answer %>
+            <%= ans.content %>
           </li>
         <% end %>
       <% end %>

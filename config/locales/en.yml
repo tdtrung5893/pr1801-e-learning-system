@@ -1,4 +1,8 @@
 en:
+  e_learning:
+    alert:
+      warning_1: "Please choose correct answer!"
+      warning_2: "Selected only one correct answer!"
   add_failed: "Add word failed!"
   category_created: "Category created!"
   category_delete_failed: "Delete failed"
@@ -55,10 +59,15 @@ en:
         create: "Create"
         create_new_category: "Create new category"
     words:
+      answer_form:
+        answer: "Answer"
+        correct: "Correct answer"
+        btn_remove: "Remove"
       form:
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
+        btn_new_answer: "Add answer"
       edit:
         edit_word: "Edit word"
         update: "Update"
@@ -75,11 +84,17 @@ en:
       new:
         add: "Add"
         add_word: "Add word"
+        category: "Category"
         lesson: "Lesson:"
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
     lessons:
+      index:
+        categories: "Categories"
+        word_list: "Word list"
+      show:
+        submit: "Submit"
       new:
         category: "Select category"
         name_lesson: "Lesson name"

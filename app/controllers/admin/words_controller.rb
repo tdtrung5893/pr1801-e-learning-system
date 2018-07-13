@@ -1,9 +1,11 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user, except: [:index, :show]
   before_action :admin_user, except: [:index, :show]
-  before_action :load_lessons, only: [:new, :create]
+  before_action :load_lessons, only: [:new, :create, :edit, :update]
   before_action only: [:index, :new, :edit, :create] do
     get_category params[:category_id]
+  end
+  before_action only: [:index, :new, :edit, :create, :update] do
     get_lesson params[:lesson_id]
   end
   before_action :get_word, only: [:edit, :update, :destroy]
@@ -16,7 +18,9 @@ class Admin::WordsController < ApplicationController
   def show; end
 
   def new
+    @lessons = @category.lessons
     @word = Word.new
+    Settings.words.answer_number.times.each {@word.answers.build}
   end
 
   def edit; end
@@ -55,7 +59,8 @@ class Admin::WordsController < ApplicationController
   private
 
   def word_params
-    params.require(:word).permit :name, :description, :question, :lesson_id
+    params.require(:word).permit :name, :description, :question, :lesson_id,
+      answers_attributes: [:id, :content, :correctness]
   end
 
   def get_word

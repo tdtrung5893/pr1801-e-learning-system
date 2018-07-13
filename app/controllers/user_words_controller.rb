@@ -3,7 +3,7 @@ class UserWordsController < ApplicationController
 
   def create
     ActiveRecord::Base.transaction do
-      word_data = [user_word_params.keys, user_word_params.values].transpose.to_h
+      word_data = [user_word_params.keys, user_word_params.values].transpose
       word_data.each do |key, value|
         UserWord.create user: current_user, word_id: key, answer_id: value
       end

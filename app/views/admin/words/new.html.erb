@@ -3,7 +3,26 @@
 <div class="container margin-header">
   <h1 class="title"><%= t ".add_word" %></h1>
     <div class="row offset-sm-3">
-      <div class="nav-item dropdown col-2">
+
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle category-option" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t ".category" %>
+        </a>
+        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownBlog">
+          <% @categories.each do |category| %>
+            <%= link_to category.name,
+              new_admin_category_lesson_word_path(category),
+                class: "dropdown-item" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-5 category-name">
+        <%= @category.name %>
+      </div>
+    </div>
+
+    <div class="row offset-sm-3">
+      <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle category-option" id="navbarDropdownBlog"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= t ".lesson" %>
@@ -12,7 +31,7 @@
           <% @lessons.each do |lesson| %>
             <%= link_to lesson.name,
               new_admin_category_lesson_word_path(@category, lesson),
-              class: "dropdown-item" %>
+                class: "dropdown-item" %>
           <% end %>
         </div>
       </div>

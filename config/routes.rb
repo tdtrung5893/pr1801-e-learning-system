@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "categories#index"
 
+  get "/words", to: "static_pages#home"
   get "static_pages/about"
   get "static_pages/help"
   get    "/login",   to: "sessions#new"
@@ -11,10 +12,10 @@ Rails.application.routes.draw do
   resources :user_words, only: [:index, :create]
   resources :users
   resources :categories, only: [:index, :show] do
-      resources :lessons, only: [:index, :show] do
-        resources :words, only: [:index, :show]
-      end
+    resources :lessons, only: [:index, :show] do
+      resources :words, only: [:index, :show]
     end
+  end
 
   namespace :admin do
     resources :users
