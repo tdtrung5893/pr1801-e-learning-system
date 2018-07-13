@@ -67,7 +67,6 @@ en:
         alphabet: "Alphabet"
         delete: "Delete"
         edit: "Edit"
-        go: "Go"
         search: "Search"
         word_groups: "Word groups"
         word_list: "Word List"
@@ -179,7 +178,6 @@ en:
   words:
     index:
       alphabet: "Alphabet"
-      go: "Go"
       search: "Search"
       word_groups: "Word groups"
       word_list: "Word List"

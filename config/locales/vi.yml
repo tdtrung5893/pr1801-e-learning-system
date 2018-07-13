@@ -67,7 +67,6 @@ vi:
         alphabet: "Bảng chữ cái"
         delete: "Xóa"
         edit: "Sửa"
-        go: "Tìm"
         search: "Tìm kiếm"
         word_groups: "Nhóm từ"
         word_list: "Danh sách từ"
@@ -179,7 +178,6 @@ vi:
   words:
     index:
       alphabet: "Bảng chữ cái"
-      go: "Tìm"
       search: "Tìm kiếm"
       word_groups: "Nhóm từ"
       word_list: "Danh sách từ"

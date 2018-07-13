@@ -1,5 +1,5 @@
 class Lesson < ApplicationRecord
-  has_many :words
+  has_many :words, dependent: :destroy
   has_many :user_lessons
   belongs_to :category
 
