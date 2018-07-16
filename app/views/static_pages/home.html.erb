@@ -2,10 +2,15 @@
 <div class="container mt-5 mb-3">
   <div class="text-sm-center jumbotron mb-3">
     <h1><%= t".word_list" %></h1>
-    <h2>(<%= @category.name %>: <%= @lesson.name %>)</h2>
   </div>
-  <%= form_tag category_lesson_words_path, method: :get do %>
+  <%= form_tag words_path, method: :get do %>
     <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <%= select_tag :lesson_id,
+          grouped_options_for_select(@categories.map {|category| [category.name,
+            category.lessons.map {|lesson| [lesson.name, lesson.id]}]}),
+          include_blank: t(".all_lessons"), class: "btn btn-primary" %>
+      </div>
       <% if logged_in? %>
         <div class="input-group-prepend">
           <%= select_tag :learned,
@@ -37,7 +42,7 @@
           <% end %>
         </ul>
       </div>
-      <%= will_paginate %>
+      <%= will_paginate @words %>
     </div>
   </div>
 </div>

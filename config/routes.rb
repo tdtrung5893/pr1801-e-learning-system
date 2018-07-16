@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get "/words", to: "static_pages#home"
   get "static_pages/about"
   get "static_pages/help"
-  get    "/login",   to: "sessions#new"
-  post   "/login",   to: "sessions#create"
-  delete "/logout",  to: "sessions#destroy"
+
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :user_words, only: [:index, :create]

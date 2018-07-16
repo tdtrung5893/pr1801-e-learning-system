@@ -2,17 +2,23 @@ class Admin::WordsController < ApplicationController
   before_action :logged_in_user, except: [:index, :show]
   before_action :admin_user, except: [:index, :show]
   before_action :load_lessons, only: [:new, :create, :edit, :update]
+  before_action :load_user_words, only: :index
   before_action only: [:index, :new, :edit, :create] do
     get_category params[:category_id]
   end
   before_action only: [:index, :new, :edit, :create, :update] do
     get_lesson params[:lesson_id]
   end
-  before_action :get_word, only: [:edit, :update, :destroy]
+  before_action only: [:edit, :update, :destroy] do
+    get_word params[:id]
+  end
 
   def index
-    @words = @lesson.words.search_prefix(params[:prefix]).order_name_asc.
-      paginate page: params[:page]
+    if logged_in?
+      search(current_user.id)
+    else
+      search(params[:user_id])
+    end
   end
 
   def show; end
@@ -61,9 +67,5 @@ class Admin::WordsController < ApplicationController
   def word_params
     params.require(:word).permit :name, :description, :question, :lesson_id,
       answers_attributes: [:id, :content, :correctness]
-  end
-
-  def get_word
-    redirect_to root_url unless @word = Word.find_by(id: params[:id])
   end
 end

@@ -37,6 +37,10 @@ en:
   word_update_failed: "Word update failed!"
   word_updated: "Word updated!"
 
+  models:
+    user:
+      avatar: "Should be less than 5MB"
+
   admin:
     categories:
       form:
@@ -119,6 +123,30 @@ en:
         user_name: "User Name"
         users: "All Users"
         you_sure: "You sure?"
+    words:
+      form:
+        word_description: "Word description:"
+        word_name: "Word name:"
+        word_question: "Word question:"
+      edit:
+        edit_word: "Edit word"
+        update: "Update"
+      index:
+        add_word: "Add word"
+        alphabet: "Alphabet"
+        delete: "Delete"
+        edit: "Edit"
+        search: "Search"
+        word_groups: "Word groups"
+        word_list: "Word List"
+        you_sure: "You sure?"
+      new:
+        add: "Add"
+        add_word: "Add word"
+        lesson: "Lesson:"
+        word_description: "Word description:"
+        word_name: "Word name:"
+        word_question: "Word question:"
 
   categories:
     index:
@@ -139,6 +167,13 @@ en:
       register: "Register"
       search: "Search.."
       user_list: "User list"
+      word_list: "Word list"
+  lessons:
+    index:
+      categories: "Categories"
+      word_list: "Word list"
+    show:
+      submit: "Submit"
   password_resets:
     edit:
       password: "New password"
@@ -159,6 +194,18 @@ en:
       remember: "Remember me"
       user_name: "User name"
       username_ph_login: "Enter your name"
+  shared:
+    error_messages:
+      error: "error"
+      the_form_contains: "The form contains"
+  static_pages:
+    home:
+      all_lessons: "All lessons"
+      alphabet: "Alphabet"
+      learned_unlearned: "Learned/Unlearned"
+      search: "Search"
+      word_groups: "Word groups"
+      word_list: "Word list"
   users:
     form:
       email: "Email"
@@ -196,13 +243,3 @@ en:
       search: "Search"
       word_groups: "Word groups"
       word_list: "Word List"
-      words: "Words"
-  models:
-    user:
-      avatar: "Should be less than 5MB"
-  lessons:
-    index:
-      categories: "Categories"
-      word_list: "Word list"
-    show:
-      submit: "Submit"
