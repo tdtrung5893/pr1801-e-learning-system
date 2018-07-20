@@ -277,6 +277,8 @@ GEM
       domain_name (~> 0.5)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.11)
+      i18n (>= 0.6.6, < 2)
     inflecto (0.0.2)
     ipaddress (0.8.3)
     jbuilder (2.7.0)
@@ -431,6 +433,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   config
   fog (= 1.42)
+  i18n-js
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
@@ -453,4 +456,4 @@ DEPENDENCIES
   will_paginate-bootstrap4
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

@@ -8,6 +8,7 @@ class UserWord < ApplicationRecord
   private
 
   def check_correct
-    status = word.answers.correct.include? answer
+    self.status = word.answers.correct.include? answer
   end
 end
+

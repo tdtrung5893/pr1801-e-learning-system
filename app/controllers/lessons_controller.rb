@@ -1,7 +1,12 @@
 class LessonsController < ApplicationController
   before_action :logged_in_user, only: :show
-  before_action :get_category, only: :index
-  before_action :get_lesson, only: :show
+  before_action only: :index do
+    get_category params[:category_id]
+  end
+  before_action only: :show do
+    get_lesson params[:id]
+  end
+
   def index
     @lessons = @category.lessons
   end
@@ -14,13 +19,5 @@ class LessonsController < ApplicationController
 
   def lesson_params
     params.require(:lesson).permit :category_id, :name
-  end
-
-  def get_lesson
-    redirect_to root_url unless @lesson = Lesson.find_by(id: params[:id])
-  end
-
-  def get_category
-    redirect_to root_url unless @category = Category.find_by(id: params[:category_id])
   end
 end

@@ -11,8 +11,7 @@
     <% @category.lessons.each do |lesson| %>
       <%= link_to lesson.name, category_lesson_path(id: lesson.id),
         class: "lesson-title" %>
-      <%= link_to t(".word list"),
-        category_lesson_words_path(@category, lesson) %>
+      <%= link_to t(".word list"), category_lesson_words_path(@category, lesson) %>
     <% end %>
   </div>
 </div>

@@ -1,0 +1,10 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <%= f.label :content, t(".answer") %>
+  </div>
+  <div class="panel-body">
+    <%= f.text_field :content, class: "form-control" %>
+    <%= f.check_box :correctness, id: "correctness", class: "mt-1" %>
+    <%= f.label :correctness, t(".correct") %>
+  </div>
+</div>

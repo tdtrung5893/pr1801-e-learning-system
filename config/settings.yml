@@ -8,3 +8,6 @@ uploaders:
   avatar_resize: [250, 100]
 users:
   page: 10
+words:
+  answer_number: 4
+
