@@ -38,11 +38,13 @@ class Admin::UsersController < ApplicationController
   end
 
   def destroy
-    if @user.destroy
+    if !@user.role?
+      @user.destroy
       flash[:success] = t "user_deleted"
       redirect_to admin_users_url
     else
-      render :index
+      redirect_to admin_users_url
+      flash[:danger] = t "cant_delete"
     end
   end
 

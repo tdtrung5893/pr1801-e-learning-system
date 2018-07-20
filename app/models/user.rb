@@ -7,6 +7,12 @@ class User < ApplicationRecord
   has_many :registers
   has_many :user_lessons
   has_many :user_words
+  has_many :active_relationships, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships
 
   validate :avatar_size
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -34,9 +40,8 @@ class User < ApplicationRecord
 
   def remember
     self.remember_token = User.new_token
-    update_attribute(:remember_digest, User.digest(remember_token))
+    update_attributes remember_digest: User.digest(remember_token)
   end
-
 
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
@@ -65,5 +70,17 @@ class User < ApplicationRecord
     if avatar.size > Settings.user.avatar_size.megabytes
       errors.add(:avatar, t(".avatar"))
     end
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
   end
 end

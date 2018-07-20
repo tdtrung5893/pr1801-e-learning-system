@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :get_user, only: [:show, :edit, :update, :destroy]
+  before_action :get_user, only: [:show, :edit, :update, :destroy, :following,
+    :followers]
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @users = User.load_data.paginate(page: params[:page], per_page: Settings.users.page)
+    @users = User.load_data
+      .paginate page: params[:page], per_page: Settings.users.page
   end
 
   def new
@@ -37,6 +39,18 @@ class UsersController < ApplicationController
   end
 
   def destroy; end
+
+  def following
+    @title = t "following"
+    @users = @user.following.paginate page: params[:page]
+    render :show_follow
+  end
+
+  def followers
+    @title = t "followers"
+    @users = @user.followers.paginate page: params[:page]
+    render :show_follow
+  end
 
   private
 

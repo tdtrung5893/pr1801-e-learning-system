@@ -4,6 +4,7 @@ en:
       warning_1: "Please choose correct answer!"
       warning_2: "Selected only one correct answer!"
   add_failed: "Add word failed!"
+  cant_delete: "Can not delete user"
   category_created: "Category created!"
   category_delete_failed: "Delete failed"
   category_deleted: "Category deleted!"
@@ -15,6 +16,8 @@ en:
   email_blank: "Can't be empty"
   exam_complete: "Exam complete"
   exam_error: "An error occurred while doing lesson"
+  followers: "Folowers"
+  following: "Following"
   lesson_create: "Lesson created!"
   lesson_create_fail: "Lesson create failed!"
   lesson_deleted: "Lesson deleted successfully!"
@@ -62,47 +65,12 @@ en:
         category_name: "Category name:"
         create: "Create"
         create_new_category: "Create new category"
-    words:
-      answer_form:
-        answer: "Answer"
-        correct: "Correct answer"
-        btn_remove: "Remove"
-      form:
-        word_description: "Word description:"
-        word_name: "Word name:"
-        word_question: "Word question:"
-        btn_new_answer: "Add answer"
+    lessons:
       edit:
-        edit_word: "Edit word"
-        update: "Update"
-      index:
-        add_word: "Add word"
-        alphabet: "Alphabet"
         delete: "Delete"
         edit: "Edit"
-        search: "Search"
-        word_groups: "Word groups"
-        word_list: "Word List"
-        words: "Words"
-        you_sure: "You sure?"
-      new:
-        add: "Add"
-        add_word: "Add word"
-        category: "Category"
-        lesson: "Lesson:"
-        word_description: "Word description:"
-        word_name: "Word name:"
-        word_question: "Word question:"
-    lessons:
-      index:
-        categories: "Categories"
-        word_list: "Word list"
-      show:
-        submit: "Submit"
-      new:
-        category: "Select category"
+        edit_lesson: "Edit lesson"
         name_lesson: "Lesson name"
-        new_lesson: "New lesson"
       index:
         categories: "Categories"
         delete: "Delete"
@@ -110,11 +78,12 @@ en:
         new_lesson: "Add new lesson"
         word_list: "Word list"
         you_sure: "You sure?"
-      edit:
-        delete: "Delete"
-        edit: "Edit"
-        edit_lesson: "Edit lesson"
+      new:
+        category: "Select category"
         name_lesson: "Lesson name"
+        new_lesson: "New lesson"
+      show:
+        submit: "Submit"
     users:
       index:
         avatar: "Avatar"
@@ -124,7 +93,12 @@ en:
         users: "All Users"
         you_sure: "You sure?"
     words:
+      answer_form:
+        answer: "Answer"
+        btn_remove: "Remove"
+        correct: "Correct answer"
       form:
+        btn_new_answer: "Add answer"
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
@@ -143,6 +117,7 @@ en:
       new:
         add: "Add"
         add_word: "Add word"
+        category: "Category:"
         lesson: "Lesson:"
         word_description: "Word description:"
         word_name: "Word name:"
@@ -169,8 +144,26 @@ en:
       user_list: "User list"
       word_list: "Word list"
   lessons:
+    edit:
+      submit: "Submit"
+    exam:
+      submit: "Submit"
+    lesson_result:
+      correct_answer: "(Correct answer)"
+      lesson: "Lesson"
+      lesson_failed: "Oops!! You've not completed the lesson yet."
+      lesson_success: "Congratulation! You've completed the lesson."
+      not_select_answer: "(You've not select answer!)"
+      result: "Exam result"
+      result_word: "question"
+      try_again: "Try again"
+      user: "User"
+      wrong_answer: "(Incorrect answer)"
+      your_answer: "Your answer"
     index:
       categories: "Categories"
+      lesson_completed: "Lesson completed"
+      try_again: "Try again"
       word_list: "Word list"
     show:
       submit: "Submit"
@@ -198,6 +191,9 @@ en:
     error_messages:
       error: "error"
       the_form_contains: "The form contains"
+    stats:
+      following: "Following:"
+      followers: "Followers:"
   static_pages:
     home:
       all_lessons: "All lessons"
@@ -207,11 +203,22 @@ en:
       word_groups: "Word groups"
       word_list: "Word list"
   users:
+    follow:
+      follow: "Follow"
     form:
       email: "Email"
       password: "Password"
       user_name: "User Name"
       confirmation: "Confirmation"
+    unfollow:
+      unfollow: "Unfollow"
+    user:
+      delete: "Delete"
+      you_sure: "You sure?"
+    edit:
+      edit_user: "Edit user"
+      save_changes: "Save changes"
+      update_your_profile: "Update your profile"
     index:
       avatar: "Avatar"
       email: "Email"
@@ -230,42 +237,16 @@ en:
       username_ph: "Enter user name"
     show:
       content: "Nothing to show"
-      follow: "Follow"
-      following: "people following"
       setting: " Account settings"
-    edit:
-      edit_user: "Edit user"
-      save_changes: "Save changes"
-      update_your_profile: "Update your profile"
+    show_follow:
+      avatar: "Avatar"
+      delete: "Delete"
+      email: "Email"
+      setting: " Account settings"
+      user_name: "User name"
   words:
     index:
       alphabet: "Alphabet"
       search: "Search"
       word_groups: "Word groups"
       word_list: "Word List"
-      words: "Words"
-  models:
-    user:
-      avatar: "Should be less than 5MB"
-  lessons:
-    index:
-      categories: "Categories"
-      word_list: "Word list"
-      lesson_completed: "Lesson completed"
-      try_again: "Try again"
-    exam:
-      submit: "Submit"
-    lesson_result:
-      result_word: "question"
-      not_select_answer: "(You've not select answer!)"
-      correct_answer: "(Correct answer)"
-      wrong_answer: "(Incorrect answer)"
-      your_answer: "Your answer"
-      user: "User"
-      lesson: "Lesson"
-      result: "Exam result"
-      try_again: "Try again"
-      lesson_success: "Congratulation! You've completed the lesson."
-      lesson_failed: "Oops!! You've not completed the lesson yet."
-    edit:
-      submit: "Submit"
