@@ -3,13 +3,13 @@
   <%= form_for :user_word, url: user_words_path do |f| %>
     <%= f.hidden_field :lesson_id, value: @lesson.id %>
     <% @words.each_with_index do |w, index| %>
-      <li class="list-answer">
+      <li class="list-answer font-weight-bold">
         <%= index + 1 %>)
         <%= w.question %>
       </li>
       <div class="mt-1 mb-3">
         <% w.answers.each do |ans| %>
-          <li class="list-answer">
+          <li class="list-answer ml-3">
             <%= f.radio_button w.id, ans.id %>
             <%= ans.content %>
           </li>

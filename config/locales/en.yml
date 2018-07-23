@@ -251,15 +251,21 @@ en:
     index:
       categories: "Categories"
       word_list: "Word list"
+      lesson_completed: "Lesson completed"
+      try_again: "Try again"
     exam:
       submit: "Submit"
     lesson_result:
       result_word: "question"
-      not_select_answer: "You've not select answer!"
+      not_select_answer: "(You've not select answer!)"
       correct_answer: "(Correct answer)"
       wrong_answer: "(Incorrect answer)"
       your_answer: "Your answer"
       user: "User"
       lesson: "Lesson"
       result: "Exam result"
-      try_again: Try again
+      try_again: "Try again"
+      lesson_success: "Congratulation! You've completed the lesson."
+      lesson_failed: "Oops!! You've not completed the lesson yet."
+    edit:
+      submit: "Submit"

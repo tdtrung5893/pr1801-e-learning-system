@@ -245,7 +245,28 @@ body {
   border-radius: 30px;
 }
 
+.lesson-title-complete {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  color: $green;
+  background-color: $light-gray;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border: solid 3px $green;
+  border-radius: 30px;
+}
+
 .lesson-title:hover {
+  background-color: $white;
+  color: $light-blue;
+  text-decoration: none;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}
+
+.lesson-title-complete:hover {
   background-color: $white;
   color: $light-blue;
   text-decoration: none;

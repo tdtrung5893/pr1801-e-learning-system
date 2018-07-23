@@ -1,3 +1,3 @@
 <div class="container margin-header margin-footer">
-  <%= render !@user_lesson.nil? ? "lesson_result" : "exam" %>
+  <%= render @user_lesson.nil? ? "exam" : "lesson_result" %>
 </div>
