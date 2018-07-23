@@ -295,3 +295,15 @@ input.radio_word, .checkbox_answer {
 .list-answer {
   list-style: none;
 }
+
+.correct_answer {
+  color: green;
+}
+
+.wrong_answer {
+  color: red;
+}
+
+.point {
+  font-size: 25px;
+}
