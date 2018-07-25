@@ -316,11 +316,11 @@ input.radio_word, .checkbox_answer {
 }
 
 .correct_answer {
-  color: green;
+  color: $green;
 }
 
 .wrong_answer {
-  color: red;
+  color: $red;
 }
 
 .point {
@@ -329,4 +329,12 @@ input.radio_word, .checkbox_answer {
 
 .users.follow {
   padding: 0;
+}
+
+.remove_record {
+  background-color: $red;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  padding: 5px;
 }

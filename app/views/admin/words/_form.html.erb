@@ -27,16 +27,18 @@
 
   <div class="form-group">
     <div class="offset-3 col-6" id="answers">
-      <%= f.fields_for :answers do |answer| %>
-        <div class="single_answer">
-          <%= render "answer_form", f: answer %>
+      <%= f.fields_for :answers do |builder| %>
+        <div class="fields">
+          <%= render "answer", f: builder %>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="form-group">
-    <div class="offset-7 col-2">
-      <%= f.submit yield(:button_text), id: "newword", class: "btn btn-success btn-register" %>
+
+  <div class="form-actions">
+    <div class="offset-3 col-6">
+      <%= link_to_add_row(t(".add_answer"), f, :answers, class: "btn btn-primary mb-2") %>
+      <%= f.submit yield(:button_text), id: "new-word", class: "btn btn-success btn-register mb-3" %>
     </div>
   </div>
 <% end %>

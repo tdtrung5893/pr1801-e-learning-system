@@ -26,7 +26,7 @@ class Admin::WordsController < ApplicationController
   def new
     @lessons = @category.lessons
     @word = Word.new
-    Settings.words.answer_number.times.each {@word.answers.build}
+    @word.answers.build
   end
 
   def edit; end
