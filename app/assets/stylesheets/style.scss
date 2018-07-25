@@ -215,7 +215,6 @@ body {
   text-align: center;
 }
 
-/* Error */
 #error_explanation {
   color: $red;
   ul {
@@ -229,8 +228,7 @@ body {
   .form-control {
     color: $state-danger-text;
   }
-}
-*/
+}*/
 
 .lesson-title {
   display: block;
@@ -327,4 +325,8 @@ input.radio_word, .checkbox_answer {
 
 .point {
   font-size: 25px;
+}
+
+.users.follow {
+  padding: 0;
 }

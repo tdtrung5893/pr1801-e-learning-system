@@ -1,5 +1,10 @@
 vi:
+  e_learning:
+    alert:
+      warning_1: "Please choose correct answer!"
+      warning_2: "Selected only one correct answer!"
   add_failed: "Thêm từ thất bại!"
+  cant_delete: "Không thể xóa người dùng"
   category_created: "Tạo khóa học thành công!"
   category_delete_failed: "Xóa thất bại"
   category_deleted: "Xóa khóa học thành công!"
@@ -11,6 +16,8 @@ vi:
   email_blank: "Nhập email để tiếp tục."
   exam_complete: "Bạn đã hoàn thành bài kiểm tra"
   exam_error: "Đã có lỗi xảy ra trong quá trình làm bài kiểm tra"
+  followers: "Người theo dõi"
+  following: "Đang theo dõi"
   lesson_create: "Tạo bài học thành công!"
   lesson_create_fail: "Đã có lỗi xảy ra khi tạo bài học mới!"
   lesson_deleted: "Xóa bài học thành công!"
@@ -59,10 +66,11 @@ vi:
         create: "Tạo"
         create_new_category: "Tạo khóa học mới"
     lessons:
-      new:
-        category: "Chọn khóa học"
+      edit:
+        delete: "Xóa"
+        edit: "Sửa"
+        edit_lesson: "Sửa bài học"
         name_lesson: "Tên bài học"
-        new_lesson: "Bài học mới"
       index:
         categories: "Các khóa học"
         delete: "Xóa"
@@ -70,11 +78,12 @@ vi:
         new_lesson: "Thêm bài học mới"
         word_list: "Danh sách từ"
         you_sure: "Bạn đã chắc chắn?"
-      edit:
-        delete: "Xóa"
-        edit: "Sửa"
-        edit_lesson: "Sửa bài học"
+      new:
+        category: "Chọn khóa học"
         name_lesson: "Tên bài học"
+        new_lesson: "Bài học mới"
+      show:
+        submit: "Submit"
     users:
       index:
         avatar: "Ảnh đại diện"
@@ -84,7 +93,12 @@ vi:
         users: "Tất cả người dùng"
         you_sure: "Bạn đã chắc chắn?"
     words:
+      answer_form:
+        answer: "Answer"
+        btn_remove: "Remove"
+        correct: "Correct answer"
       form:
+        btn_new_answer: "Add answer"
         word_description: "Mô tả từ:"
         word_name: "Tên từ:"
         word_question: "Câu hỏi cho từ:"
@@ -103,6 +117,7 @@ vi:
       new:
         add: "Thêm"
         add_word: "Thêm từ"
+        category: "Category:"
         lesson: "Bài học:"
         word_description: "Mô tả từ:"
         word_name: "Tên từ:"
@@ -129,8 +144,26 @@ vi:
       user_list: "Danh sách người dùng"
       word_list: "Danh sách từ"
   lessons:
+    edit:
+      submit: "Submit"
+    exam:
+      submit: "Submit"
+    lesson_result:
+      correct_answer: "(Correct answer)"
+      lesson: "Lesson"
+      lesson_failed: "Oops!! You've not completed the lesson yet."
+      lesson_success: "Congratulation! You've completed the lesson."
+      not_select_answer: "(You've not select answer!)"
+      result: "Exam result"
+      result_word: "question"
+      try_again: "Try again"
+      user: "User"
+      wrong_answer: "(Incorrect answer)"
+      your_answer: "Your answer"
     index:
       categories: "Các khóa học"
+      lesson_completed: "Lesson completed"
+      try_again: "Try again"
       word_list: "Danh sách từ"
     show:
       submit: "Submit"
@@ -158,6 +191,9 @@ vi:
     error_messages:
       error: "lỗi"
       the_form_contains: "Mẫu có"
+    stats:
+      following: "Đang theo dõi:"
+      followers: "Người theo dõi:"
   static_pages:
     home:
       all_lessons: "Mọi bài học"
@@ -167,11 +203,22 @@ vi:
       word_groups: "Nhóm từ"
       word_list: "Danh sách từ"
   users:
+    follow:
+      follow: "Theo dõi"
     form:
       email: "Email"
       password: "Mật khẩu"
       user_name: "Tên người dùng"
       confirmation: "Xác nhận"
+    unfollow:
+      unfollow: "Hủy theo dõi"
+    user:
+      delete: "Xóa"
+      you_sure: "Bạn đã chắc chắn?"
+    edit:
+      edit_user: "Sửa thông tin người dùng"
+      save_changes: "Lưu các thay đổi"
+      update_your_profile: "Cập nhật hồ sơ của bạn"
     index:
       avatar: "Ảnh đại diện"
       email: "Email"
@@ -190,13 +237,13 @@ vi:
       username_ph: "Nhập tên người dùng"
     show:
       content: "Không có hoạt động nào để hiển thị"
-      follow: "Theo dõi"
-      following: "người đang theo dõi"
       setting: " Thiết lập tài khoản"
-    edit:
-      edit_user: "Sửa thông tin người dùng"
-      save_changes: "Lưu các thay đổi"
-      update_your_profile: "Cập nhật hồ sơ của bạn"
+    show_follow:
+      avatar: "Ảnh đại diện"
+      delete: "Xóa"
+      email: "Email"
+      setting: " Thiết lập tài khoản"
+      user_name: "Tên người dùng"
   words:
     index:
       alphabet: "Bảng chữ cái"
