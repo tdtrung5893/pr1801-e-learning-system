@@ -7,17 +7,35 @@
       <span><%= @category.name %></span>
     </div>
   </div>
-  <div class="offset-md-4 col-md-3 margin-footer mt-3">
+  <div class="offset-md-4 col-md-4 margin-footer mt-3 test-change">
     <% @category.lessons.each do |lesson| %>
       <% if logged_in? %>
         <% if @user_lesson.by_lesson(lesson.id).first.present? %>
           <% unless @user_lesson.by_lesson(lesson.id).first.status %>
             <%= link_to lesson.name, category_lesson_path(id: lesson.id),
               class: "lesson-title" %>
+              <div class="progress mt-2">
+                <div class="progress-bar bg-success completed" role="progressbar"
+                  data-word-correct="<%= word_correct(lesson) %>%">
+                </div>
+                <div class="progress-bar bg-danger wrong" role="progressbar"
+                  data-word-wrong="<%= word_wrong(lesson) %>%">
+                </div>
+              </div>
             <span><%= link_to t(".try_again"), edit_category_lesson_path(@category, lesson) %></span> |
           <% else %>
-            <%= link_to lesson.name, category_lesson_path(id: lesson.id),
+            <div>
+              <%= link_to lesson.name, category_lesson_path(id: lesson.id),
               class: "lesson-title-complete" %>
+              <div class="progress mt-2">
+                <div class="progress-bar bg-success completed-2" role="progressbar"
+                  data-word-correct="<%= word_correct(lesson) %>%">
+                </div>
+                <div class="progress-bar bg-danger wrong-2" role="progressbar"
+                  data-word-wrong="<%= word_wrong(lesson) %>%">
+                </div>
+              </div>
+            </div>
             <span class="text-success"><%= t ".lesson_completed" %></span> |
           <% end %>
         <% else %>
