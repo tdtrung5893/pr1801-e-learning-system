@@ -27,6 +27,9 @@ class UsersController < ApplicationController
 
   def show
     @user_words = @user.user_words.by_status
+    @activities = PublicActivity::Activity.order(created_at: :desc)
+      .where(owner_id: @user, owner_type: User.name)
+      .paginate page: params[:page]
   end
 
   def edit; end

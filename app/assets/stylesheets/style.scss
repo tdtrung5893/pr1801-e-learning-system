@@ -92,7 +92,7 @@ body {
   margin: 20px 0;
 }
 
-/* Profile sidebar */
+/* profile sidebar */
 .profile-sidebar {
   padding: 20px 0 10px 0;
   background: $white;
@@ -181,7 +181,7 @@ body {
   margin-left: -2px;
 }
 
-/* Profile Content */
+/* profile content */
 .profile-content {
   padding: 20px;
   background: $white;
@@ -343,4 +343,25 @@ input.radio_word, .checkbox_answer {
   height: auto;
   max-height: 200px;
   overflow-x: hidden;
+}
+
+.activity {
+  border-bottom: solid 1px #ccc;
+  padding: 16px 0;
+  em {
+    color: #777;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
+
+.timestamp {
+  color: $dark-gray;
+  display: block;
+  margin-left: 60px;
+}
+
+.activity-userpic img {
+  max-width: 5%;
+  max-height: 5%;
 }

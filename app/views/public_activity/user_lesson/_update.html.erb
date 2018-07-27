@@ -1,0 +1,8 @@
+<%= t ".completed" %>
+<% if activity.trackable.lesson %>
+  "<%= link_to activity.trackable.lesson.name,
+    category_lesson_path(activity.trackable.lesson.category,
+      activity.trackable.lesson) %>".
+<% else %>
+  <%= t ".certain_lesson_which_has_since_been_removed" %>
+<% end %>
