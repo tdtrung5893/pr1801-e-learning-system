@@ -15,7 +15,7 @@ class UserWordsController < ApplicationController
       @words.each do |word|
         found = false
         word_data.each do |key, value|
-          if word.id == key
+          if word.id == key.to_i
             found = true
             UserWord.create user: current_user, word_id: key, answer_id: value
             break
