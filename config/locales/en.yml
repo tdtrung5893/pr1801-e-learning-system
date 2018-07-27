@@ -77,31 +77,24 @@ en:
         edit: "Edit"
         new_lesson: "Add new lesson"
         word_list: "Word list"
-        you_sure: "You sure?"
+        you_sure: "Are you sure?"
       new:
         category: "Select category"
         name_lesson: "Lesson name"
         new_lesson: "New lesson"
       show:
         submit: "Submit"
-    users:
-      index:
-        avatar: "Avatar"
-        delete: "Delete"
-        email: "Email"
-        user_name: "User Name"
-        users: "All Users"
-        you_sure: "You sure?"
     words:
-      answer_form:
-        answer: "Answer"
-        btn_remove: "Remove"
+      answer:
+        answers: "Answer"
         correct: "Correct answer"
+        delete: "Remove answer"
       form:
         btn_new_answer: "Add answer"
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
+        add_answer: "Add answer"
       edit:
         edit_word: "Edit word"
         update: "Update"
@@ -113,7 +106,7 @@ en:
         search: "Search"
         word_groups: "Word groups"
         word_list: "Word List"
-        you_sure: "You sure?"
+        you_sure: "Are you sure?"
       new:
         add: "Add"
         add_word: "Add word"
@@ -122,7 +115,16 @@ en:
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
-
+      show:
+        submit: "Submit"
+    users:
+      index:
+        avatar: "Avatar"
+        delete: "Delete"
+        email: "Email"
+        user_name: "User Name"
+        users: "All Users"
+        you_sure: "Are you sure?"
   categories:
     index:
       next: "Next"
@@ -214,7 +216,7 @@ en:
       unfollow: "Unfollow"
     user:
       delete: "Delete"
-      you_sure: "You sure?"
+      you_sure: "Are you sure?"
     edit:
       edit_user: "Edit user"
       save_changes: "Save changes"
