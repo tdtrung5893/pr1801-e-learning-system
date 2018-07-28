@@ -25,7 +25,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @user_words = @user.user_words.by_status
+  end
 
   def edit; end
 
