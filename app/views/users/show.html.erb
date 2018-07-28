@@ -17,12 +17,35 @@
             <%= @user.email %>
           </div>
         </div>
+
         <!-- END SIDEBAR USER TITLE -->
         <!-- SIDEBAR BUTTONS -->
         <div class="profile-userbuttons">
           <%= render "follow_form" if logged_in? %>
           <div class="stats">
             <%= render "shared/stats" %>
+          </div>
+        </div>
+
+        <div class="profile-userbuttons">
+          <div class="profile-usertitle-name">
+            <%= t ".number_word" %><%= @user_words.size %>
+          </div>
+        </div>
+        <div class="profile-userbuttons">
+          <div class="profile-usertitle-name">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle category-option" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span><%= t ".word_learned" %></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right scrollable-menu" aria-labelledby="navbarDropdownBlog">
+                <% @user_words.each do |user_word| %>
+                  <div class="dropdown-item">
+                    <%= user_word.word.name %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
         <!-- END SIDEBAR BUTTONS -->

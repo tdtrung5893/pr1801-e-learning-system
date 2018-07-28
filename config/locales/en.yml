@@ -240,6 +240,8 @@ en:
     show:
       content: "Nothing to show"
       setting: " Account settings"
+      word_learned: "Wordlist learned"
+      number_word: "Number word learned: "
     show_follow:
       avatar: "Avatar"
       delete: "Delete"

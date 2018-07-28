@@ -12,6 +12,8 @@ class UserWord < ApplicationRecord
   }
 
   scope :by_user, -> user_id { where(user_id: user_id) }
+
+  scope :by_status, -> { where status: true }
   private
 
   def check_correct

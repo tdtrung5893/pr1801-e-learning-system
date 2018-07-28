@@ -338,3 +338,9 @@ input.radio_word, .checkbox_answer {
   cursor: pointer;
   padding: 5px;
 }
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
