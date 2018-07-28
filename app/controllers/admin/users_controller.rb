@@ -5,7 +5,8 @@ class Admin::UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.load_data.paginate(page: params[:page], per_page: Settings.users.page)
+    @users = User.by_user(params[:search]).paginate page: params[:page],
+      per_page: Settings.users.page
   end
 
   def new
@@ -41,7 +42,6 @@ class Admin::UsersController < ApplicationController
     if !@user.role?
       @user.destroy
       flash[:success] = t "user_deleted"
-      redirect_to admin_users_url
     else
       redirect_to admin_users_url
       flash[:danger] = t "cant_delete"

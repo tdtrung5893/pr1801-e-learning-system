@@ -29,7 +29,7 @@ $(document).on("turbolinks:load", function () {
 
   $('form').on('click', '.remove_record', function(event) {
     $(this).prev('input[type=hidden]').val('1');
-    $(this).closest('div.single_answer').hide();
+    $(this).closest('div.single_answer').remove();
     event.preventDefault();
   });
 
@@ -39,5 +39,72 @@ $(document).on("turbolinks:load", function () {
     regexp = new RegExp($(this).data('id'), 'g');
     $('.fields').append($(this).data('fields').replace(regexp, time));
     event.preventDefault();
+  });
+
+  // $('#users_search input').keyup(function(){
+  //   $.get($('#users_search').attr('action'), $('#users_search').serialize(), null, 'script');
+  //   return false;
+  // });
+
+  $('#search').keyup(function() {
+    var value = $(this).val();
+    $.ajax({
+      type: 'get',
+      url: '/users',
+      data: {search: value},
+      dataType: 'text',
+      success: function() {
+        $('#search').serialize();
+      }
+    });
+  });
+
+  $('.table').on('click', '.destroy', function() {
+    var id = $(this).data('id');
+    var childTr = $(this);
+    if (confirm(I18n.t('you_sure'))) {
+      $.ajax({
+        url: '/admin/users/' + id,
+        method: 'DELETE',
+        success: function() {
+          childTr.closest('tr').fadeOut();
+        }
+      })
+      return false;
+    }
+  });
+
+  $('.table').on('click', '.lesson-option', function() {
+    var id = $(this).data('id');
+    var category_id = $(this).data('category');
+    var child = $(this);
+    if (confirm(I18n.t('you_sure'))) {
+      $.ajax({
+        url: '/admin/categories/' + category_id + '/lessons/' + id,
+        method: 'DELETE',
+        success: function() {
+          child.closest('tr').fadeOut();
+        }
+      })
+      return false;
+    }
+  });
+
+  $('.word-list').on('click', '.destroy-word', function() {
+    var id = $(this).data('id');
+    var lesson_id = $(this).data('lesson_id');
+    var category_id = $(this).data('category_id');
+    var child = $(this);
+    if (confirm(I18n.t('you_sure'))) {
+      $.ajax({
+        url: '/admin/categories/' + category_id + '/lessons/' + lesson_id +
+          '/words/' + id,
+        method: 'DELETE',
+        success: function() {
+          child.closest('li').fadeOut();
+        }
+      })
+      return false;
+    }
   });
 });

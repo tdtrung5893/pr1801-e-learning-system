@@ -3,6 +3,7 @@ en:
     alert:
       warning_1: "Please choose correct answer!"
       warning_2: "Selected only one correct answer!"
+  you_sure: "Are you sure?"
   add_failed: "Add word failed!"
   cant_delete: "Can not delete user"
   category_created: "Category created!"
@@ -119,11 +120,13 @@ en:
         submit: "Submit"
     users:
       index:
+        users: "All Users"
+        search_user: "Search user"
+      user:
+        user_name: "User Name"
         avatar: "Avatar"
         delete: "Delete"
         email: "Email"
-        user_name: "User Name"
-        users: "All Users"
         you_sure: "Are you sure?"
   categories:
     index:
@@ -214,20 +217,17 @@ en:
       confirmation: "Confirmation"
     unfollow:
       unfollow: "Unfollow"
-    user:
-      delete: "Delete"
-      you_sure: "Are you sure?"
     edit:
       edit_user: "Edit user"
       save_changes: "Save changes"
       update_your_profile: "Update your profile"
     index:
+      users: "All Users"
+      search_user: "Search user"
+    users:
+      user_name: "User Name"
       avatar: "Avatar"
       email: "Email"
-      delete: "Delete"
-      user_name: "User Name"
-      users: "All Users"
-      you_sure: "Are you sure?"
     new:
       email_ph: "Enter user email"
       password: "Password"

@@ -28,23 +28,7 @@
         <%= will_paginate @words %>
       </div>
       <div>
-        <ul class="list-group my-3">
-          <% @words.each do |word| %>
-            <li class="list-group-item list-group-item-action">
-              <div class="row">
-                <%= link_to word.name, "#",
-                  class: "col-10 btn btn-link btn-sm text-left" %>
-                <%= link_to t(".edit"),
-                  edit_admin_category_lesson_word_path(@category, @lesson, word),
-                  class: "col-1 btn btn-outline-success btn-sm" %>
-                <%= link_to t(".delete"),
-                  admin_category_lesson_word_path(@category, @lesson, word),
-                  method: :delete, data: {confirm: t(".you_sure")},
-                  class: "col-1 btn btn-outline-danger btn-sm" %>
-              </div>
-            </li>
-          <% end %>
-        </ul>
+        <%= render "word" %>
       </div>
       <%= will_paginate %>
     </div>

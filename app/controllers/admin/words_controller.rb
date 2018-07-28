@@ -55,7 +55,6 @@ class Admin::WordsController < ApplicationController
   def destroy
     if @word.destroy
       flash[:success] = t"word_deleted"
-      redirect_to admin_category_lesson_words_url
     else
       flash[:danger] = t"delete_word_failed"
       render :index
