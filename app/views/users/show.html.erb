@@ -62,9 +62,11 @@
       </div>
     </div>
     <div class="col-md-9">
-      <%= will_paginate @activities %>
-      <%= render "shared/activities" %>
-      <%= will_paginate @activities %>
+      <% if current_user.following? @user %>
+        <%= will_paginate @activities %>
+        <%= render "shared/activities" %>
+        <%= will_paginate @activities %>
+      <% end %>
     </div>
   </div>
 </div>
