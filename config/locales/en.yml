@@ -3,7 +3,6 @@ en:
     alert:
       warning_1: "Please choose correct answer!"
       warning_2: "Selected only one correct answer!"
-  you_sure: "Are you sure?"
   add_failed: "Add word failed!"
   cant_delete: "Can not delete user"
   category_created: "Category created!"
@@ -40,10 +39,16 @@ en:
   word_deleted: "Word deleted!"
   word_update_failed: "Word update failed!"
   word_updated: "Word updated!"
+  you_sure: "Are you sure?"
 
   models:
     user:
       avatar: "Should be less than 5MB"
+
+  activities:
+    index:
+      activities: "Activities"
+      ago: "ago."
 
   admin:
     categories:
@@ -85,17 +90,32 @@ en:
         new_lesson: "New lesson"
       show:
         submit: "Submit"
+    users:
+      index:
+        avatar: "Avatar"
+        delete: "Delete"
+        email: "Email"
+        search_user: "Search user"
+        user_name: "User Name"
+        users: "All Users"
+        you_sure: "Are you sure?"
+      user:
+        avatar: "Avatar"
+        delete: "Delete"
+        email: "Email"
+        user_name: "User Name"
+        you_sure: "Are you sure?"
     words:
       answer:
         answers: "Answer"
         correct: "Correct answer"
         delete: "Remove answer"
       form:
+        add_answer: "Add answer"
         btn_new_answer: "Add answer"
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
-        add_answer: "Add answer"
       edit:
         edit_word: "Edit word"
         update: "Update"
@@ -116,18 +136,7 @@ en:
         word_description: "Word description:"
         word_name: "Word name:"
         word_question: "Word question:"
-      show:
-        submit: "Submit"
-    users:
-      index:
-        users: "All Users"
-        search_user: "Search user"
-      user:
-        user_name: "User Name"
-        avatar: "Avatar"
-        delete: "Delete"
-        email: "Email"
-        you_sure: "Are you sure?"
+
   categories:
     index:
       next: "Next"
@@ -136,6 +145,7 @@ en:
       welcome: "Welcome to THT E-Learning system"
   layouts:
     header:
+      activities: "Activities"
       admin: "Admin"
       advance: "Advance"
       basic: "Basic"
@@ -182,6 +192,18 @@ en:
       email_ph: "Enter your email"
       forgot_password: "Forgot password"
       submit: "Send email"
+  public_activity:
+    relationship:
+      create:
+        started_following: "started following"
+        someone_and_stopped_following_them: "someone and stopped following them."
+    user_lesson:
+      create:
+        certain_lesson_which_has_since_been_removed: "certain lesson which has since been removed."
+        tried_to_learn: "tried to learn"
+      update:
+        certain_lesson_which_has_since_been_removed: "certain lesson which has since been removed."
+        completed: "completed"
   sessions:
     new:
       forgot_password: "Forgot password?"
@@ -225,9 +247,9 @@ en:
       users: "All Users"
       search_user: "Search user"
     users:
-      user_name: "User Name"
       avatar: "Avatar"
       email: "Email"
+      user_name: "User Name"
     new:
       email_ph: "Enter user email"
       password: "Password"
@@ -238,7 +260,6 @@ en:
       user_name: "User name"
       username_ph: "Enter user name"
     show:
-      content: "Nothing to show"
       setting: " Account settings"
       word_learned: "Wordlist learned"
       number_word: "Number word learned: "

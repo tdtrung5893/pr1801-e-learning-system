@@ -39,10 +39,16 @@ vi:
   word_deleted: "Xóa từ thành công!"
   word_update_failed: "Cập nhật từ thất bại!"
   word_updated: "Từ được cập nhật thành công!"
+  you_sure: "Are you sure?"
 
   models:
     user:
       avatar: "Dung lượng ảnh đại diện không được quá 5MB"
+
+  activities:
+    index:
+      activities: "Hoạt động"
+      ago: "trước."
 
   admin:
     categories:
@@ -89,15 +95,23 @@ vi:
         avatar: "Ảnh đại diện"
         delete: "Xóa"
         email: "Email"
+        search_user: "Search user"
         user_name: "Tên người dùng"
         users: "Tất cả người dùng"
         you_sure: "Bạn đã chắc chắn?"
+      user:
+        avatar: "Avatar"
+        delete: "Delete"
+        email: "Email"
+        user_name: "User Name"
+        you_sure: "Are you sure?"
     words:
-      answer_form:
-        answer: "Answer"
-        btn_remove: "Remove"
+      answer:
+        answers: "Answer"
         correct: "Correct answer"
+        delete: "Remove answer"
       form:
+        add_answer: "Add answer"
         btn_new_answer: "Add answer"
         word_description: "Mô tả từ:"
         word_name: "Tên từ:"
@@ -131,6 +145,7 @@ vi:
       welcome: "Chào mừng bạn đến với lớp học trực tuyến THT!"
   layouts:
     header:
+      activities: "Hoạt động"
       admin: "Admin"
       advance: "Khóa học từ vựng nâng cao"
       basic: "Khóa học từ vựng cơ bản"
@@ -177,6 +192,18 @@ vi:
       email_ph: "Nhập email của bạn"
       forgot_password: "Quên mật khẩu?"
       submit: "Gửi email"
+  public_activity:
+    relationship:
+      create:
+        started_following: "bắt đầu theo dõi"
+        someone_and_stopped_following_them: "ai đó rồi ngừng theo dõi người đó."
+    user_lesson:
+      create:
+        certain_lesson_which_has_since_been_removed: "nào đó mà sau đó đã bị xóa."
+        tried_to_learn: "đã thử hoàn thành bài học"
+      update:
+        certain_lesson_which_has_since_been_removed: "nào đó mà sau đó đã bị xóa."
+        completed: "đã hoàn thành bài học"
   sessions:
     new:
       forgot_password: "Quên mật khẩu?"
@@ -212,20 +239,17 @@ vi:
       confirmation: "Xác nhận"
     unfollow:
       unfollow: "Hủy theo dõi"
-    user:
-      delete: "Xóa"
-      you_sure: "Bạn đã chắc chắn?"
     edit:
       edit_user: "Sửa thông tin người dùng"
       save_changes: "Lưu các thay đổi"
       update_your_profile: "Cập nhật hồ sơ của bạn"
     index:
+      users: "Danh sách người dùng"
+      search_user: "Search user"
+    users:
       avatar: "Ảnh đại diện"
       email: "Email"
-      delete: "Xóa người dùng"
       user_name: "Tên người dùng"
-      users: "Danh sách người dùng"
-      you_sure: "Bạn đã chắc chắn?"
     new:
       email_ph: "Nhập email người dùng"
       password: "Mật khẩu"
@@ -236,8 +260,9 @@ vi:
       user_name: "Tên người dùng"
       username_ph: "Nhập tên người dùng"
     show:
-      content: "Không có hoạt động nào để hiển thị"
       setting: " Thiết lập tài khoản"
+      word_learned: "Wordlist learned"
+      number_word: "Number word learned: "
     show_follow:
       avatar: "Ảnh đại diện"
       delete: "Xóa"

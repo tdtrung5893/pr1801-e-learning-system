@@ -62,9 +62,9 @@
       </div>
     </div>
     <div class="col-md-9">
-      <div class="profile-content">
-        <%= t ".content" %>
-      </div>
+      <%= will_paginate @activities %>
+      <%= render "shared/activities" %>
+      <%= will_paginate @activities %>
     </div>
   </div>
 </div>

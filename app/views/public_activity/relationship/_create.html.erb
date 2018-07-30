@@ -1,0 +1,6 @@
+<%= t ".started_following" %>
+<% if activity.trackable %>
+  <%= link_to activity.trackable.followed.username, activity.trackable %>.
+<% else %>
+  <%= t ".someone_and_stopped_following_them" %>
+<% end %>
