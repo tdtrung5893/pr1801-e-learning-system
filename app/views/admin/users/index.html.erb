@@ -1,28 +1,13 @@
 <% provide :title, t(".users") %>
-<div class="container margin-header margin-footer">
+<div class="container mt-5 mb-5">
   <h1 class="title"><%= t ".users" %></h1>
-  <table class="table table-bordered table-hover">
-    <tr>
-      <th><%= t ".avatar" %></th>
-      <th><%= t ".user_name" %></th>
-      <th><%= t ".email" %></th>
-      <% if current_user.role? %>
-        <th><%= t ".delete" %></th>
-      <% end %>
-    </tr>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= image_tag user.avatar, class: "thumbnail" %></td>
-        <td><%= link_to user.username, user_path(user) %></td>
-        <td><%= link_to user.email, user_path(user) %></td>
-        <% if current_user.role? && !current_user?(user) %>
-          <td class="text-center bg-warning">
-            <%= link_to t(".delete"), admin_user_path(user), method: :delete,
-              data: {confirm: t(".you_sure")} %>
-          </td>
-        <% end %>
-      </tr>
+  <div class="text-center">
+    <%= form_tag users_path, :method => "get", :id => "users_search" do %>
+      <p class="margin-header">
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag t(".search_user"), :username => nil %>
+      </p>
+      <div id="users"><%= render "user" %></div>
     <% end %>
-  </table>
-  <div><%= will_paginate %></div>
+  </div>
 </div>

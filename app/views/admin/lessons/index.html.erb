@@ -9,19 +9,5 @@
         class: "btn btn-success text-btn" %></span>
     </div>
   </div>
-  <div class="offset-md-4 col-md-3 margin-footer mt-3">
-    <% @category.lessons.each do |lesson| %>
-      <%= link_to lesson.name, "#", class: "lesson-title" %>
-      <%= link_to t(".word_list"),
-        admin_category_lesson_words_path(@category, lesson) %> |
-      <% if current_user.role? %>
-        <%= link_to t(".edit"),
-          edit_admin_category_lesson_path(@category, lesson),
-          class: "lesson-option" %> |
-        <%= link_to t(".delete"), admin_category_lesson_path(@category, lesson),
-          method: :delete, data: {confirm: t(".you_sure")},
-            class: "lesson-option" %>
-      <% end %>
-    <% end %>
-  </div>
+  <%= render "lesson" %>
 </div>

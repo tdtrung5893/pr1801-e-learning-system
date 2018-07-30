@@ -22,10 +22,18 @@ class User < ApplicationRecord
             allow_blank: true
   validates :username,  presence: true, length: { maximum: Settings.user.validates.name_maximum }
 
-  scope :load_data, -> { select(:id, :avatar, :username, :email) }
+  scope :search, -> q { where "username LIKE ?", q }
+  scope :by_user, -> search {
+    if search
+      where "username LIKE ?", "%#{search}%"
+    else
+      select(:id, :avatar, :username, :email)
+    end}
 
-  def User.new_token
-    SecureRandom.urlsafe_base64
+  class << self
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
   end
 
   def User.digest(string)

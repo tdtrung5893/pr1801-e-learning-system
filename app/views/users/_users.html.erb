@@ -1,0 +1,15 @@
+<table class="table table-bordered table-hover margin-header">
+  <tr>
+    <th><%= t ".avatar" %></th>
+    <th><%= t ".user_name" %></th>
+    <th><%= t ".email" %></th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= image_tag user.avatar, class: "thumbnail" %></td>
+      <td><%= link_to user.username, user %></td>
+      <td><%= link_to user.email, user %></td>
+    </tr>
+  <% end %>
+</table>
+<div><%= will_paginate %></div>
