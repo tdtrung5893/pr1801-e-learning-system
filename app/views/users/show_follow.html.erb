@@ -33,22 +33,12 @@
     <div class="col-9">
       <div class="container margin-header margin-footer">
         <h3 class="title"><%= @title %></h3>
-        <table class="table table-bordered table-hover">
-          <tr>
-            <th><%= t ".avatar" %></th>
-            <th><%= t ".user_name" %></th>
-            <th><%= t ".email" %></th>
-            <% if current_user.role? %>
-              <th><%= t ".delete" %></th>
-            <% end %>
-          </tr>
         <% if @users.any? %>
           <ul class="users follow">
-            <%= render @users %>
+            <%= render "users" %>
           </ul>
           <%= will_paginate %>
         <% end %>
-      </table>
       </div>
     </div>
   </div>

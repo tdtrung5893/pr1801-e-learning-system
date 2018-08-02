@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180727083230) do
+ActiveRecord::Schema.define(version: 20180801075231) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "trackable_type"
@@ -67,9 +67,6 @@ ActiveRecord::Schema.define(version: 20180727083230) do
     t.integer "followed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["followed_id"], name: "index_relationships_on_followed_id"
-    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
-    t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
   create_table "user_lessons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -84,7 +81,7 @@ ActiveRecord::Schema.define(version: 20180727083230) do
     t.integer "user_id"
     t.integer "word_id"
     t.integer "answer_id"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -95,7 +92,7 @@ ActiveRecord::Schema.define(version: 20180727083230) do
     t.string "password_digest"
     t.integer "age"
     t.boolean "gender"
-    t.boolean "role", default: false
+    t.boolean "role"
     t.string "avatar"
     t.string "phone"
     t.string "address"

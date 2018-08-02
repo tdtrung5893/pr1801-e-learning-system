@@ -4,9 +4,8 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   has_many :activities
-  has_many :registers
-  has_many :user_lessons
-  has_many :user_words
+  has_many :user_lessons, dependent: :destroy
+  has_many :user_words, dependent: :destroy
   has_many :active_relationships, class_name: Relationship.name,
     foreign_key: :follower_id, dependent: :destroy
   has_many :passive_relationships, class_name: Relationship.name,

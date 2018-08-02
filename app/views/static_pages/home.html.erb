@@ -14,8 +14,8 @@
       <% if logged_in? %>
         <div class="input-group-prepend">
           <%= select_tag :learned,
-            options_for_select(@user_words.map(&:status)),
-            include_blank: t(".learned"), class: "btn btn-secondary" %>
+            options_for_select({ t(".learned") => 1, t(".unlearned") => 0}),
+              include_blank: t(".learn_status"), class: "btn btn-secondary" %>
         </div>
       <% end %>
       <%= text_field_tag :prefix, params[:prefix], placeholder: t(".search"),
