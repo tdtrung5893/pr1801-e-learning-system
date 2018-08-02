@@ -49,6 +49,7 @@ en:
     index:
       activities: "Activities"
       ago: "ago."
+      show_content: "Nothing to show"
 
   admin:
     categories:
@@ -121,11 +122,13 @@ en:
         update: "Update"
       index:
         add_word: "Add word"
-        alphabet: "Alphabet"
+        all_lessons: "All lessons"
         delete: "Delete"
         edit: "Edit"
+        learn_status: "Learning status"
+        learned: "- Learned"
         search: "Search"
-        word_groups: "Word groups"
+        unlearned: "- Unlearned"
         word_list: "Word List"
         you_sure: "Are you sure?"
       new:
@@ -224,10 +227,10 @@ en:
   static_pages:
     home:
       all_lessons: "All lessons"
-      alphabet: "Alphabet"
-      learned_unlearned: "Learned/Unlearned"
+      learn_status: "Learning status"
+      learned: "- Learned"
       search: "Search"
-      word_groups: "Word groups"
+      unlearned: "- Unlearned"
       word_list: "Word list"
   users:
     follow:
@@ -271,7 +274,10 @@ en:
       user_name: "User name"
   words:
     index:
-      alphabet: "Alphabet"
+      all_lessons: "All lessons"
+      learn_status: "Learning status"
+      learned: "- Learned"
       search: "Search"
-      word_groups: "Word groups"
+      unlearned: "- Unlearned"
       word_list: "Word List"
+      you_sure: "Are you sure?"

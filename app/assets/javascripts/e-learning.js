@@ -41,22 +41,9 @@ $(document).on("turbolinks:load", function () {
     event.preventDefault();
   });
 
-  // $('#users_search input').keyup(function(){
-  //   $.get($('#users_search').attr('action'), $('#users_search').serialize(), null, 'script');
-  //   return false;
-  // });
-
-  $('#search').keyup(function() {
-    var value = $(this).val();
-    $.ajax({
-      type: 'get',
-      url: '/users',
-      data: {search: value},
-      dataType: 'text',
-      success: function() {
-        $('#search').serialize();
-      }
-    });
+  $('#users_search input').keyup(function(){
+    $.get($('#users_search').attr('action'), $('#users_search').serialize(), null, 'script');
+    return false;
   });
 
   $('.table').on('click', '.destroy', function() {

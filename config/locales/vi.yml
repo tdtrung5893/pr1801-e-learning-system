@@ -121,11 +121,13 @@ vi:
         update: "Cập nhật"
       index:
         add_word: "Thêm từ"
-        alphabet: "Bảng chữ cái"
+        all_lessons: "Mọi bài học"
         delete: "Xóa"
         edit: "Sửa"
+        learn_status: "Tình trạng học"
+        learned: "- Đã học"
         search: "Tìm kiếm"
-        word_groups: "Nhóm từ"
+        unlearned: "- Chưa học"
         word_list: "Danh sách từ"
         you_sure: "Bạn đã chắc chắn?"
       new:
@@ -224,10 +226,10 @@ vi:
   static_pages:
     home:
       all_lessons: "Mọi bài học"
-      alphabet: "Bảng chữ cái"
-      learned_unlearned: "Đã học/Chưa học"
+      learn_status: "Tình trạng học"
+      learned: "- Đã học"
       search: "Tìm kiếm"
-      word_groups: "Nhóm từ"
+      unlearned: "- Chưa học"
       word_list: "Danh sách từ"
   users:
     follow:
@@ -271,7 +273,10 @@ vi:
       user_name: "Tên người dùng"
   words:
     index:
-      alphabet: "Bảng chữ cái"
+      all_lessons: "Mọi bài học"
+      learn_status: "Tình trạng học"
+      learned: "- Đã học"
       search: "Tìm kiếm"
-      word_groups: "Nhóm từ"
+      unlearned: "- Chưa học"
       word_list: "Danh sách từ"
+      you_sure: "Bạn đã chắc chắn?"

@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <%= render "layouts/header" %>
-      <div>
+      <div class="content">
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %> margin-header"><%= message %></div>
         <% end %>

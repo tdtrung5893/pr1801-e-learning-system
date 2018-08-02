@@ -35,6 +35,7 @@ end
 group :production do
   gem "fog", "1.42"
   gem "pg",  "0.20.0"
+  gem "rails_12factor", "0.0.2"
 end
 
 group :development do

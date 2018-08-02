@@ -1,4 +1,8 @@
 <% provide :title, t(".activities") %>
 <%= will_paginate %>
-<%= render "shared/activities" %>
+<% if @activities.present? %>
+  <%= render "shared/activities" %>
+<% else %>
+  <div class="title mt-5"><%= t ".show_content" %></div>
+<% end %>
 <%= will_paginate %>

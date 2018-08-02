@@ -7,8 +7,7 @@
           <%= link_to t(".word_list"),
             admin_category_lesson_words_path(@category, lesson) %> |
           <%= link_to t(".edit"),
-            edit_admin_category_lesson_path(@category, lesson),
-            class: "lesson-option" %> |
+            edit_admin_category_lesson_path(@category, lesson) %> |
           <%= link_to t(".delete"), admin_category_lesson_path(@category, lesson),
             method: :delete, data: {id: lesson.id, category: @category.id},
               class: "lesson-option" %>

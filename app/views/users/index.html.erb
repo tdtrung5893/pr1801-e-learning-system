@@ -2,14 +2,12 @@
 <div class="container mt-5 mb-5">
   <h1 class="title"><%= t ".users" %></h1>
   <div class="text-center">
-    <!-- <%#= form_tag users_path, method: "get", id: "users_search" do %>
+    <%= form_tag users_path, method: "get", id: "users_search" do %>
       <p class="margin-header">
-        <%#= text_field_tag :search, params[:search] %>
-        <%#= submit_tag t(".search_user"), username: nil %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag t(".search_user"), username: nil %>
       </p>
-      <div id="users"><%#= render "users" %></div>
-    <%# end %> -->
-    <input type="text" name="search" id="search">
-    <div id="users"><%= render "users" %></div>
+      <div id="users"><%= render "users" %></div>
+    <% end %>
   </div>
 </div>
